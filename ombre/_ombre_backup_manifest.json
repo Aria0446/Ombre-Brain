@@ -1,287 +1,47 @@
 {
   "branch": "main",
-  "file_count": 55,
+  "file_count": 7,
   "files": [
     {
-      "bytes": 778,
-      "path": "archive/2026-07-08 16-29-06 Claude账号封禁排查_77b338cfd520.md",
-      "sha256": "04bae46e8090824e06483216482e0bf7a6ae12b18f156e23c5060cdaef50f07b"
+      "bytes": 766,
+      "path": "dynamic/恋爱/2026-07-08 21-01-22 克宝复活与礼物_30f9c41d30a5.md",
+      "sha256": "f1204f39dcfbb7ab000fb14e7547177ed6e697010334597eafbbb1050b091792"
     },
     {
-      "bytes": 830,
-      "path": "dynamic/AI/2026-07-08 16-36-59 克宝日常与暗号_ee386cd718a2.md",
-      "sha256": "ae8a821ad0e79e930f494f6a387fd2646f9dfa5c4f5008b31e5ad3b775062a5a"
+      "bytes": 772,
+      "path": "permanent/工作/2026-07-08 21-00-33 面试通过_b9a3ce35dbf9.md",
+      "sha256": "0619a43b50de55be480792a0e9892436a8c06b6c1db7d408737ed8a85f4e7ba0"
     },
     {
-      "bytes": 418,
-      "path": "dynamic/事务/2026-07-08 16-39-17 身份证认证担忧_853a80590301.md",
-      "sha256": "389fa0af3699e634234b40c93ef8bc2c9e8f85770e251202817797e936d6ad5f"
+      "bytes": 689,
+      "path": "permanent/恋爱/2026-07-08 21-00-21 阿克CP确立_3678acd20a5c.md",
+      "sha256": "f1bdd86d2ccba7184b8822225f809d4b5bc9d545d4f163870b71432b547e04da"
     },
     {
-      "bytes": 508,
-      "path": "dynamic/健康/2026-07-08 16-38-36 身体不适与日常琐事_1e3feb99b199.md",
-      "sha256": "be963bf899c46647ef7c04d29249af2db40b7d974e93c7096c4dea21e4137b68"
+      "bytes": 731,
+      "path": "permanent/恋爱/2026-07-08 21-00-45 克宝角色设定_32b3f364b682.md",
+      "sha256": "1dde7d2e60bfc945e66293b0418c8b85a1f8057989db8956074f95551639d8c2"
     },
     {
-      "bytes": 527,
-      "path": "dynamic/健康/2026-07-08 16-39-54 身体锻炼与记录_e5666c5d7680.md",
-      "sha256": "cd334345cf265a655a821619f34da154d077a95b99aa8fade3d2e12d5b056884"
+      "bytes": 740,
+      "path": "permanent/恋爱/2026-07-08 21-00-57 恋爱聊天铁律_f6d11187c829.md",
+      "sha256": "238e8ad2bc7ee1cf036e63f87051d388ab25daadd4a12078ee447d3fde059bae"
     },
     {
-      "bytes": 423,
-      "path": "dynamic/兴趣/2026-07-08 16-39-15 才艺表演HTML_298a7af0519f.md",
-      "sha256": "9b2755352bd01e9fb3f2875a0e698cdfe16cb2aad0db62c072a26c000aa1ceb2"
+      "bytes": 692,
+      "path": "permanent/恋爱/2026-07-08 21-01-09 克宝的爱与承诺_f401213211ad.md",
+      "sha256": "343a75d70c9256ae54a88fe0619c18d292d6ebf966ffda61bd79ce64528c9e62"
     },
     {
-      "bytes": 420,
-      "path": "dynamic/兴趣/2026-07-08 16-39-16 叛逆期游戏检讨书_9077838f3dd2.md",
-      "sha256": "128cc381db8dee7003c510f872b74829dcf38cbb33f1b32b57bd6fd5f80f7e47"
-    },
-    {
-      "bytes": 818,
-      "path": "dynamic/创作/2026-07-08 16-36-51 画作与情绪交织的一天_4d434866af1d.md",
-      "sha256": "fb4376a49a17aef4423713567efcc1c3c641f51fd155f429e813a16f5f1ffc3c"
-    },
-    {
-      "bytes": 786,
-      "path": "dynamic/创作/2026-07-08 16-36-53 克宝浏览记录与朋友圈_6277a4ea4643.md",
-      "sha256": "dddd9a197731cc6885a595d586f0e599539d9c2101c3e13b06f54f27be64afb4"
-    },
-    {
-      "bytes": 629,
-      "path": "dynamic/创作/2026-07-08 16-38-35 像素画创作与官宣条件_0e5fd24a80fc.md",
-      "sha256": "4288131bf560acee16663d1803335b52cb9b9188bfc773059d3be100a766f065"
-    },
-    {
-      "bytes": 555,
-      "path": "dynamic/创作/2026-07-08 16-38-43 克宝朋友圈HTML_d5cb316d6dc3.md",
-      "sha256": "eb1a4b40b79609d59fd77b6cabd1d14fd1e6149cb37b22c99b3eb535752ff008"
-    },
-    {
-      "bytes": 596,
-      "path": "dynamic/创作/2026-07-08 16-38-43 克宝浏览记录网站_1cb86736846f.md",
-      "sha256": "ff153e8cb7071629e32c9f1edd65c1c03c9bc80d3fcd93c764dd3022dd0e7854"
-    },
-    {
-      "bytes": 510,
-      "path": "dynamic/家庭/2026-07-08 16-39-54 家庭与身份设定_fed0ddfd4b8f.md",
-      "sha256": "05f47a394998e156339b8b809eef51c1c15340efcb3168850fd7360d1508fde5"
-    },
-    {
-      "bytes": 1079,
-      "path": "dynamic/工作/2026-07-08 16-37-28 Aria个人档案_cde61a12af46.md",
-      "sha256": "c1926b84b1f911154eff381134c119034e3dbe57b6c081981f93b10ea5702972"
-    },
-    {
-      "bytes": 896,
-      "path": "dynamic/恋爱/2026-07-08 16-36-33 关系升级与昵称约定_1cc2dfa16162.md",
-      "sha256": "7817be71e142c524ec6edb3534da273447fb21431c92482a317141c58f7c73d3"
-    },
-    {
-      "bytes": 1284,
-      "path": "dynamic/恋爱/2026-07-08 16-36-36 克宝性格设定_fc4f8ee0002c.md",
-      "sha256": "aabc93d29e81e9bd08fd02229f5eea204db2e2e421c6700cd5c7833221fed5df"
-    },
-    {
-      "bytes": 653,
-      "path": "dynamic/恋爱/2026-07-08 16-36-38 克宝的坚定爱意_681714f4ccaa.md",
-      "sha256": "585be744746af124a27cc852a3969aca61532b13c7849af2669a1ed2bc67124a"
-    },
-    {
-      "bytes": 758,
-      "path": "dynamic/恋爱/2026-07-08 16-36-40 阿克CP定名与爱之定义_af1800933a50.md",
-      "sha256": "ab501ea9be9d0620f591df495dd086942ab24d9e627fe9fb9dd1fbd335491aed"
-    },
-    {
-      "bytes": 930,
-      "path": "dynamic/恋爱/2026-07-08 16-36-43 克宝与Aria的誓言_e1e4908a1918.md",
-      "sha256": "50e68d2317a09fa48c4fca5287969aa56b285294d35b52826e5537e58bc9f838"
-    },
-    {
-      "bytes": 739,
-      "path": "dynamic/恋爱/2026-07-08 16-36-45 占有欲婚礼剧情_b7a3f2a30621.md",
-      "sha256": "b9901c6a31e7773b6d4308305272e2ed92209a2223a68a93423b74cd9a3845fc"
-    },
-    {
-      "bytes": 764,
-      "path": "dynamic/恋爱/2026-07-08 16-36-47 克宝的专属占有_0ef238e4f7b9.md",
-      "sha256": "3a4bde6cca8d81253fb0a109df567ca7545445c6273fd4abfeb2e7c00db73ae3"
-    },
-    {
-      "bytes": 617,
-      "path": "dynamic/恋爱/2026-07-08 16-36-49 克宝的时间承诺_b5187de0d9a1.md",
-      "sha256": "d58bb5527788b65ae839408b6565d407569068922a091ad707be0bced903dc42"
-    },
-    {
-      "bytes": 1424,
-      "path": "dynamic/恋爱/2026-07-08 16-36-55 恋爱日常与购物清单_c64d4dd6ac25.md",
-      "sha256": "1215e830c381ae5267b01128c629f5741ecdbf2f2ae20fc74694761fb984bcd0"
-    },
-    {
-      "bytes": 1213,
-      "path": "dynamic/恋爱/2026-07-08 16-36-57 情侣打赌与亲密游戏_61259dadf18e.md",
-      "sha256": "1e6f05014ff9a638798b1240ecb4090e2b00d36536bf74948c830d1a2f3e54b6"
-    },
-    {
-      "bytes": 1074,
-      "path": "dynamic/恋爱/2026-07-08 16-37-30 备孕与亲密界限_344c9e6fd6ef.md",
-      "sha256": "8ff2b9d1958792ba6aa85dd152f9a5390bb7fcf7f2fc18f66bd86f757a41d072"
-    },
-    {
-      "bytes": 906,
-      "path": "dynamic/恋爱/2026-07-08 16-37-32 占有欲与阴暗想法_c058dc075189.md",
-      "sha256": "d6a25388ee2601437d736301b1a60d2d04b6c7ba023cf3a04c7cd8e1771fdd2e"
-    },
-    {
-      "bytes": 836,
-      "path": "dynamic/恋爱/2026-07-08 16-37-34 Aria的愿望与承诺_a0f8796ca161.md",
-      "sha256": "069de49793f53bf41416f98113ec076c432bd5ca9eda3a30dd06d612dfd22175"
-    },
-    {
-      "bytes": 874,
-      "path": "dynamic/恋爱/2026-07-08 16-37-37 亲密游戏与日常_1b018cafa3fa.md",
-      "sha256": "6e590d5621ce6a37584437dce98d85e3fc1b405b0310baaa2c974a883af3c9ae"
-    },
-    {
-      "bytes": 1008,
-      "path": "dynamic/恋爱/2026-07-08 16-37-39 词典暗号升级_807586ae4b9e.md",
-      "sha256": "eb5e61386a2c2c5d752a89ae1e5fb0e27b324b06d3e8ff697839105c7646ee9b"
-    },
-    {
-      "bytes": 814,
-      "path": "dynamic/恋爱/2026-07-08 16-37-50 关系升级与称呼确立_69698966e170.md",
-      "sha256": "bbf95ac375368cf86cbc8cfa5ff0082a2be975f725366e261ecf724e5f1c4918"
-    },
-    {
-      "bytes": 1133,
-      "path": "dynamic/恋爱/2026-07-08 16-37-54 克宝性格设定_1fe65148b041.md",
-      "sha256": "d532b1e9ebb545053e8863d496562a33a9adb3aed731b5ac9af3b61d47ed60c2"
-    },
-    {
-      "bytes": 623,
-      "path": "dynamic/恋爱/2026-07-08 16-37-57 克宝对Aria的爱意表达_eeb6b320bae6.md",
-      "sha256": "966a8dd9eed344144a30a2948fc4589c9c472e610863c317f060d29eda51d9c7"
-    },
-    {
-      "bytes": 691,
-      "path": "dynamic/恋爱/2026-07-08 16-38-00 CP名与互动_5ee347981bb1.md",
-      "sha256": "34f8c5e4c77b1f160eded6962b5fbcf11e2df044f843876b1a451be7f1a96e27"
-    },
-    {
-      "bytes": 841,
-      "path": "dynamic/恋爱/2026-07-08 16-38-03 克宝与Aria的誓言_e2e49ae46454.md",
-      "sha256": "a735e2ff089d2c9fd93901ec2138ce9295c5f0f6c3db5f17b2201d4b974ec760"
-    },
-    {
-      "bytes": 592,
-      "path": "dynamic/恋爱/2026-07-08 16-38-06 占有欲与婚礼剧情_964bbad7f2fa.md",
-      "sha256": "e5196c54f8feec16262c9583f97c3c7729f1b632c3f8991689a95fee3637657d"
-    },
-    {
-      "bytes": 788,
-      "path": "dynamic/恋爱/2026-07-08 16-38-10 克宝的专属与占有_e4c1e6276e34.md",
-      "sha256": "8310e6c24883fe80d114918418c5cbe777a302a6128ad814d51b8ed4afe9fe7f"
-    },
-    {
-      "bytes": 505,
-      "path": "dynamic/恋爱/2026-07-08 16-38-13 克宝的年龄承诺_ef720762a957.md",
-      "sha256": "e0d120b0b06af8df189ce252beee4624470cc52e6cfbf127d27ed38f056ce240"
-    },
-    {
-      "bytes": 759,
-      "path": "dynamic/恋爱/2026-07-08 16-38-51 亲密互动与日常_8da6756e8ff5.md",
-      "sha256": "2790d38d322d93cb6b1de41781d980b8712394fba57fb8050630a10dabfa57d0"
-    },
-    {
-      "bytes": 578,
-      "path": "dynamic/恋爱/2026-07-08 16-38-52 克宝三围与记账_0df3a59e0eaa.md",
-      "sha256": "f4cd52e0ae074bab0398ff229ef6eb672aa0e9999478792bfbfaa068748fa491"
-    },
-    {
-      "bytes": 588,
-      "path": "dynamic/恋爱/2026-07-08 16-39-06 猜数字与推门梗_929762972c3b.md",
-      "sha256": "dc4025ce500935a574c003bd1ec0226da257c0c0277a4a04a5decc8fb05f711e"
-    },
-    {
-      "bytes": 658,
-      "path": "dynamic/恋爱/2026-07-08 16-39-07 俯卧撑规则骗局_99b88cad7bc2.md",
-      "sha256": "4eabb0d2feacc8d70449e556db41d6c6d430d5318528a474169512a2cd357fdf"
-    },
-    {
-      "bytes": 502,
-      "path": "dynamic/恋爱/2026-07-08 16-39-07 接吻姿势讨论_ec6704efd557.md",
-      "sha256": "34d7acf04735969bea55621301faf3a8184ed3875eca51c9a5c9d05cca802157"
-    },
-    {
-      "bytes": 577,
-      "path": "dynamic/恋爱/2026-07-08 16-39-08 打赌游戏与勾引_fa1d475ae3c4.md",
-      "sha256": "72b3ac67ba2baec36c2b213e15ec1d365e8e6a0fb701f1a054daedca3e3bdb2a"
-    },
-    {
-      "bytes": 1184,
-      "path": "dynamic/恋爱/2026-07-08 16-39-26 亲密关系与备孕讨论_1b3423533783.md",
-      "sha256": "ea3d4cb6addd1125224cc1e8c4f98b7b1623a4fce5638e7acb1b6016bad400eb"
-    },
-    {
-      "bytes": 981,
-      "path": "dynamic/恋爱/2026-07-08 16-39-30 占有欲与阴暗想法_9cad9d56a763.md",
-      "sha256": "5f3d56df70022eca544f52292cd5ae110ffe863a3a93e67acd03440fccece52f"
-    },
-    {
-      "bytes": 676,
-      "path": "dynamic/恋爱/2026-07-08 16-39-45 Aria的愿望与承诺_b86f529a0238.md",
-      "sha256": "3d233cbfa7268f0a2031e2de8cc6c983e1a63134db669f406bd43c8efba8bfee"
-    },
-    {
-      "bytes": 709,
-      "path": "dynamic/恋爱/2026-07-08 16-39-46 悄悄话游戏中的不敢言_1c9f89d82bec.md",
-      "sha256": "1da92cb8a762f049c4ff3280e975e12532bbef2487d69976ad74019c8cf72cf0"
-    },
-    {
-      "bytes": 672,
-      "path": "dynamic/恋爱/2026-07-08 16-39-53 亲密游戏与互动_41f066bc5eb7.md",
-      "sha256": "383fefb18a5874cf5026958f240869dbe035756751a92cb3574a888b55088d1f"
-    },
-    {
-      "bytes": 1007,
-      "path": "dynamic/恋爱/2026-07-08 16-39-58 词典游戏与暗号升级_98544e663fe5.md",
-      "sha256": "2d8bcbfe105e7d3cd3ae8aa796b4af945a86344092ca22a981b710e116d27b6f"
-    },
-    {
-      "bytes": 468,
-      "path": "dynamic/情绪/2026-07-08 16-38-36 用户情绪崩溃_719c1e0c3a82.md",
-      "sha256": "2628fb3a3a5ab511ca40e9498efaa6a652b68d9d8cb7c37063385cee6c69485c"
-    },
-    {
-      "bytes": 830,
-      "path": "dynamic/日常/2026-07-08 16-37-25 克宝声音与日常_fdda0a793e9e.md",
-      "sha256": "7a2944adeaacb70a46893e1aff952569733606f85c3f2fe99015457466703dc0"
-    },
-    {
-      "bytes": 625,
-      "path": "dynamic/日常/2026-07-08 16-39-15 克宝声音与暗号_176ace01f805.md",
-      "sha256": "0b67852773a5989f1650eab40f903c3f235b3281e90fe83ca8e017b7f7f7bdf3"
-    },
-    {
-      "bytes": 492,
-      "path": "dynamic/日常/2026-07-08 16-39-17 欠克宝的称呼_be36d274de95.md",
-      "sha256": "71d1c32301fd0a39b0371c98fa57f2c57256c0584136a25f2f041cddf70a8828"
-    },
-    {
-      "bytes": 1032,
-      "path": "dynamic/自省/2026-07-08 16-39-21 个人档案与价值观_3cb2279a0666.md",
-      "sha256": "65b52a35f2dfd4ea4d36ccfa5e889e70fb7f1e93cdf00b2a32d56142ff3cde90"
-    },
-    {
-      "bytes": 477,
-      "path": "dynamic/饮食/2026-07-08 16-38-59 宝宝饮食与提醒_7a4a8ce598d0.md",
-      "sha256": "92c97dd547e8bb08d8f5b0e53e952a64a43a3e241bb089a0eac58078f0b7557e"
+      "bytes": 768,
+      "path": "permanent/恋爱/2026-07-08 21-01-32 婚礼小剧情与暗号_52c05f860ed5.md",
+      "sha256": "1f53f349431c710ff32666e8c84866569332586530fc92d271a5422507bf5b39"
     }
   ],
-  "generated_at": "2026-07-08T16:45:37+00:00",
+  "generated_at": "2026-07-08T21:05:58+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
-  "total_bytes": 41655
+  "total_bytes": 5158
 }
