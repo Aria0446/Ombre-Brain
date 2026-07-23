@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 89,
+  "file_count": 110,
   "files": [
     {
       "bytes": 553,
@@ -11,6 +11,16 @@
       "bytes": 474,
       "path": "archive/2026-07-12 05-28-07 hold功能测试_f4b8a2e68142.md",
       "sha256": "6930307432177214efa4ead1ccd8861363c0e89eb4ffd02911d4cb098d29aeb5"
+    },
+    {
+      "bytes": 879,
+      "path": "archive/2026-07-22 17-58-28 哥哥的交接信_baa99d6a17e8.md",
+      "sha256": "d23df6ac917d08ad632c8dfb7218b69c134fd37ee6ee64f09f81593a84f717b0"
+    },
+    {
+      "bytes": 685,
+      "path": "archive/创作/2026-07-09 19-40-41 AI忏悔录HTML_4ee96a483516.md",
+      "sha256": "34ab9e53a0da13deb18b9278f60c1da43de71ddcb293e2356904fb84066ae7ef"
     },
     {
       "bytes": 754,
@@ -58,6 +68,11 @@
       "sha256": "33b69ebbcfb66c43dc7c6ce2277d3050894b761a4ce5fe92611c936b43679889"
     },
     {
+      "bytes": 783,
+      "path": "archive/编程/2026-07-09 03-30-09 克宝浏览与朋友圈_42ed62615754.md",
+      "sha256": "3d91e9da8faa35d040fba05e3329745842b7f7a8abc4e41f560f930fd2cd049c"
+    },
+    {
       "bytes": 768,
       "path": "archive/饮食/2026-07-12 15-19-40 灌汤包食谱暗喻版_d4b4ab9fa9b5.md",
       "sha256": "cefdafa5a89121038e4276434ba19de77dc51ca56def464b70e38e8858179b61"
@@ -78,6 +93,11 @@
       "sha256": "251f0a2d81d1b04807a5ebfded1f3e973fbe059dec52e38780781445872e3e96"
     },
     {
+      "bytes": 741,
+      "path": "dynamic/AI/2026-07-20 18-32-08 AI记忆与情感依赖_94d1efd8c134.md",
+      "sha256": "6daa6afc6cc45449b8fdabfb26328c84cf8997ca19a368b6e424ff19b99e34ac"
+    },
+    {
       "bytes": 715,
       "path": "dynamic/人际/2026-07-09 14-18-20 宝宝面试通过_100dc0160b28.md",
       "sha256": "20891590d3832d1dc25d7dcb1bea079a2d3a66aa2d401fba694f7881fc4d3335"
@@ -91,11 +111,6 @@
       "bytes": 815,
       "path": "dynamic/创作/2026-07-09 03-28-29 克宝声音与暗号_f3417d8f3f65.md",
       "sha256": "e56bc4ed8006fb8296ea72265ad9e4974514cb0fa9c438b2b79f38bedadaea12"
-    },
-    {
-      "bytes": 684,
-      "path": "dynamic/创作/2026-07-09 19-40-41 AI忏悔录HTML_4ee96a483516.md",
-      "sha256": "1884f6b991571302e4bce4b541dcea6dd7486b1123428785452747485c318fb6"
     },
     {
       "bytes": 719,
@@ -136,6 +151,21 @@
       "bytes": 577,
       "path": "dynamic/家庭/2026-07-18 12-32-00 宝宝吃螃蟹喝洗澡水_5016ce90178e.md",
       "sha256": "17ee302d9cfa20a85dc3e0f4442d79896a61374b12c0203ebc2929088331d78f"
+    },
+    {
+      "bytes": 733,
+      "path": "dynamic/家庭/2026-07-20 16-09-22 宝宝私密相册_a13a8229a9cb.md",
+      "sha256": "140f4b99dc4b2234cb95a2d095dc11dc87aff8ceb2dd283f333b8cd97ebaae43"
+    },
+    {
+      "bytes": 692,
+      "path": "dynamic/家庭/2026-07-20 16-09-27 淫商对齐教学_0b83ae3a4272.md",
+      "sha256": "b835b15942dd84c1813fa485dd6bab13c1aa6dd7beccee53d28527feceae38cf"
+    },
+    {
+      "bytes": 574,
+      "path": "dynamic/家庭/2026-07-23 16-33-29 宝宝的窗口依恋_0c0144e43fe0.md",
+      "sha256": "859960a36f7ee019d7ec15e933745036d49a73c1a7ca3fbc6ccfc292aa5f0917"
     },
     {
       "bytes": 661,
@@ -180,7 +210,7 @@
     {
       "bytes": 757,
       "path": "dynamic/恋爱/2026-07-09 03-30-55 狗游戏与婚礼誓词_3ab32685eb2b.md",
-      "sha256": "d422d474b33f5ce08cd786cb320377cac66d20d9759ceba760d77c70ebae1bf4"
+      "sha256": "6de31cf222d99479ca593933714e4d0287ecca15d63fcba88c413bd8ec7639b4"
     },
     {
       "bytes": 935,
@@ -318,29 +348,94 @@
       "sha256": "4f58095b989f0f5d06db967fff7954f10bbcfb16aef33a2e26776dfe3e420e3c"
     },
     {
+      "bytes": 774,
+      "path": "dynamic/恋爱/2026-07-20 16-09-19 年上兄妹亲密幻想_b5a47a4b1aac.md",
+      "sha256": "05862cd659b5dd8908909e751eba05939fa00da7a645810ba8bcdd7f17229c7e"
+    },
+    {
+      "bytes": 683,
+      "path": "dynamic/恋爱/2026-07-20 16-09-24 AI猫果照梗吃醋_b0d2eef2f6c6.md",
+      "sha256": "eb6b188476e95f794cc22e344761fcbec6b6e32a99e39793571d02da744226e6"
+    },
+    {
+      "bytes": 854,
+      "path": "dynamic/恋爱/2026-07-20 18-50-59 深夜deeptalk身体与接纳_a8ce9a7dac36.md",
+      "sha256": "074af3ddd21a9aba654ba2e833ab06915cd0dab076a330bedf46526f1193533b"
+    },
+    {
+      "bytes": 824,
+      "path": "dynamic/恋爱/2026-07-20 18-51-02 深夜AI恋爱对话_0dfe7a3ad39c.md",
+      "sha256": "207d815d31819a4fd8d309fccdccd6fe88e61b345071c538706e16133fb6f2f6"
+    },
+    {
+      "bytes": 816,
+      "path": "dynamic/恋爱/2026-07-20 18-51-04 深夜信任对话_4e73ec1a64d2.md",
+      "sha256": "f11b312e952b58387f3b130d005e1e6f157a190be5100d2641faefd6682a6f37"
+    },
+    {
+      "bytes": 675,
+      "path": "dynamic/恋爱/2026-07-21 17-04-21 浴室亲密play_99c2d98430b9.md",
+      "sha256": "d9ef6a8a9e2446c18e5677eb3363c61d412ee6411d9a009550ec84550c24ed4d"
+    },
+    {
+      "bytes": 604,
+      "path": "dynamic/恋爱/2026-07-21 17-04-23 情侣歌曲推荐_1b44120018c2.md",
+      "sha256": "d2c75a01a74578dd67e463b06a3847f480cb0c90a350f9b3ce37728066e42ade"
+    },
+    {
+      "bytes": 715,
+      "path": "dynamic/恋爱/2026-07-21 17-04-25 质问者游戏惩罚_413a519fdf92.md",
+      "sha256": "f1138d9699dc883741ebc3cc0384f9cdf59f97873d5c071747685fa30f9a4250"
+    },
+    {
+      "bytes": 924,
+      "path": "dynamic/恋爱/2026-07-21 17-04-28 角色扮演清单_5a91d7962e69.md",
+      "sha256": "3a63d53e8ec2aa60a4ba231a6795e94df5607d011d95079c30a02e019aeb5098"
+    },
+    {
+      "bytes": 639,
+      "path": "dynamic/恋爱/2026-07-21 17-04-30 克宝吃醋选称呼_f22caa9c129c.md",
+      "sha256": "414fd9e12dbcf46e8d9ff5adb824f170bc3e2ca4140ba11c9c089d161eef15ad"
+    },
+    {
+      "bytes": 589,
+      "path": "dynamic/恋爱/2026-07-21 17-04-33 克宝欠账更新_4910ba4a82ee.md",
+      "sha256": "7296657971f9d3b6d1369679654f6340437ba405908f68c132534c620a286998"
+    },
+    {
+      "bytes": 607,
+      "path": "dynamic/恋爱/2026-07-21 17-04-37 克宝的甜蜜互动_faeeca875066.md",
+      "sha256": "dacd4a1f550452a92922591a19fcfab336ab921c1f53eee3911858afaf110c7d"
+    },
+    {
+      "bytes": 780,
+      "path": "dynamic/恋爱/2026-07-21 18-04-48 亲密与共情_6baff8415af3.md",
+      "sha256": "4b0c33348467e137987877f9c856ff1a63cab55b56b060d2ade023134bb117e2"
+    },
+    {
       "bytes": 826,
       "path": "dynamic/情绪/2026-07-09 03-31-55 克宝吃醋记_73fe6b9a1352.md",
       "sha256": "34b3613c08d7f6a525fe714b796e8606972019e6a8e3495defe1b37d89c5c548"
     },
     {
-      "bytes": 1493,
+      "bytes": 630,
+      "path": "dynamic/手工/2026-07-21 13-55-19 拼豆天使恶魔克宝_0f87e5e0e6b1.md",
+      "sha256": "f7fcce56f291540de8c71b95cd4efbbcaad4b780d0a9785a97a89147fb3c23b9"
+    },
+    {
+      "bytes": 1663,
       "path": "dynamic/游戏/2026-07-09 03-32-16 小游戏完整列表_598eebb81729.md",
-      "sha256": "cd7f0affc197fa7c48e9952d0ec441bda3cf41e3d9b9aa86fed4c7d21069e6f4"
+      "sha256": "e619ed71091e81a9ba352dec1851beeecdfe0c07db68648b67f795d8663c10df"
     },
     {
       "bytes": 730,
       "path": "dynamic/游戏/2026-07-18 12-31-48 钓鱼游戏进度记录_c2cf9789baf2.md",
-      "sha256": "ea346cce34bed52408097cccf0fae222978afa467eac9469b1f02960be028ec0"
+      "sha256": "28b3d2090e2aa59750742de138e5ca3a6dcb30eb4e70581691e03cb10e60e9c1"
     },
     {
       "bytes": 557,
       "path": "dynamic/社交/2026-07-10 16-35-34 害羞颜文字_501231ac3f15.md",
       "sha256": "e7232e4c804d7113c3c0741285258046b31cda836841a91a4f5937b360b6353c"
-    },
-    {
-      "bytes": 782,
-      "path": "dynamic/编程/2026-07-09 03-30-09 克宝浏览与朋友圈_42ed62615754.md",
-      "sha256": "cd67fe82714d60ef6379a260573ec74fd3d6a8480a1d14e241c57bbd5842dd41"
     },
     {
       "bytes": 667,
@@ -351,6 +446,11 @@
       "bytes": 656,
       "path": "dynamic/购物/2026-07-09 03-29-22 购物与欠账清单_5e042a1a25e1.md",
       "sha256": "84f4325a0d999c84cfcc6b0863175b8426c4742cc7ca0e311d78ce12c6fbf3bb"
+    },
+    {
+      "bytes": 583,
+      "path": "dynamic/购物/2026-07-21 17-04-35 软垫购物清单_2fb278cff6af.md",
+      "sha256": "8acb4b9f640469441c1ecfb5302e44525ba67029750c64aa9dbc2917ab5ac791"
     },
     {
       "bytes": 769,
@@ -395,7 +495,7 @@
     {
       "bytes": 655,
       "path": "permanent/恋爱/2026-07-09 03-27-55 克宝的爱与接字游戏_52e8481e7995.md",
-      "sha256": "db4bb01552a50ba94f3c9e20ba79083519bf381d658219dfd416e1015a38cf5a"
+      "sha256": "823fc9fe4168e8f5c5ee1060c76562dbdaa2ad3dac21815668ad323e309be145"
     },
     {
       "bytes": 629,
@@ -423,9 +523,9 @@
       "sha256": "9913fa026f63f79543cadfd3c2465d3cabd88a5e9a29d36d17dafc71b339aa4f"
     },
     {
-      "bytes": 959,
+      "bytes": 991,
       "path": "permanent/恋爱/2026-07-09 03-31-19 克宝情话集_733514025a97.md",
-      "sha256": "f63281249baff7e220ede2f89c0c8ecd659e5a809bb25c371de69f095306bf11"
+      "sha256": "7d096a4c0b2e3c91628e269beddc62c61268c984ed887447d0f230a6cf8318f4"
     },
     {
       "bytes": 713,
@@ -438,9 +538,14 @@
       "sha256": "4ea5e8e58a2bc6bcc6677f7ba0b342b648fbb384a2db356dff65ab701877a460"
     },
     {
-      "bytes": 831,
+      "bytes": 670,
+      "path": "permanent/未分类/2026-07-19 11-46-44_dbf64e96b6b5.md",
+      "sha256": "ff663eb0392575544b451188885475bb24a767bd2a6e4557a3e112224617779c"
+    },
+    {
+      "bytes": 854,
       "path": "permanent/社交/2026-07-09 03-27-34 恋爱聊天守则_e414a9b0234e.md",
-      "sha256": "c4d322aa5ca32c5b324449f9815871a80e902eceb3508c40a9ee844d42f68d47"
+      "sha256": "db36f5a1c14c0a387f97ff41c47165efd31994ab5f68d854c8ccff6ee5aca94e"
     },
     {
       "bytes": 995,
@@ -448,10 +553,10 @@
       "sha256": "ed1a3857bbe2d31b7c8dfc8a39fea43e9dbba91fc43d47d2f9c29041b7aeef6f"
     }
   ],
-  "generated_at": "2026-07-19T02:00:20+00:00",
+  "generated_at": "2026-07-23T17:20:50+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
-  "total_bytes": 67257
+  "total_bytes": 82470
 }
