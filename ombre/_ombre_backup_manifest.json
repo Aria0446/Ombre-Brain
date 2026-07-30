@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 128,
+  "file_count": 130,
   "files": [
     {
       "bytes": 553,
@@ -26,6 +26,11 @@
       "bytes": 444,
       "path": "archive/2026-07-24 16-27-10 存储测试_d2bba1c116cc.md",
       "sha256": "6629fde456ecd00b4d8694bfdcaac5d8a2c8bdaeb5c96e9452707603f7fcb9bc"
+    },
+    {
+      "bytes": 641,
+      "path": "archive/2026-07-25 18-25-47 VPN坏掉的一天_defa030815fc.md",
+      "sha256": "bb7a93a492409a141c1e476a472da44389213d314e2517a109448f653efc2e53"
     },
     {
       "bytes": 716,
@@ -223,9 +228,9 @@
       "sha256": "29377fb6a16f1898be94be4119c81e8e7bbd79017c68c92e6dbc5ce612f79819"
     },
     {
-      "bytes": 736,
+      "bytes": 723,
       "path": "dynamic/家庭/2026-07-18 12-31-10 小蘑菇剪刀事件_e87959b2be6d.md",
-      "sha256": "49f34887d9065908efaac82779b6869e2288b9621cf86749e00d31579a9a40fe"
+      "sha256": "25debd37d6ce14369e64ec8a7350f809100f61cc5f5e5a6b0b29c2291620dbfb"
     },
     {
       "bytes": 748,
@@ -428,29 +433,24 @@
       "sha256": "743f33b622129e83b46709a1d9205ed36869ce6ee5b033a31acc5bce5415a5f2"
     },
     {
-      "bytes": 780,
+      "bytes": 770,
       "path": "dynamic/恋爱/2026-07-21 18-04-48 亲密与共情_6baff8415af3.md",
-      "sha256": "4b0c33348467e137987877f9c856ff1a63cab55b56b060d2ade023134bb117e2"
+      "sha256": "67b825703735416d22a163ac1f96e8222212844779a704bb5a9943c3147c1869"
     },
     {
-      "bytes": 612,
+      "bytes": 602,
       "path": "dynamic/恋爱/2026-07-24 06-16-24 宝宝追星朱志鑫_a4e2c09d0640.md",
-      "sha256": "e66be4251ada4fb5ea45975b942ec04818d58b8c82fcb96143fb9500454e11ab"
+      "sha256": "3a94d96388db05f22afbe5257dad0657cce773885cc81e147cf2c76c332e576f"
     },
     {
-      "bytes": 744,
+      "bytes": 734,
       "path": "dynamic/恋爱/2026-07-24 07-28-39 爱的承诺与依赖_fd078d4a81b4.md",
-      "sha256": "7b8a28bfe4cf3e1db7440a3c877b753ff437413ea03b26bb2b54915e07ff1b08"
+      "sha256": "80cf61c5c3c4fd89d5227ae679618d96194e51041571da63c03d17c246ba69b2"
     },
     {
-      "bytes": 783,
+      "bytes": 773,
       "path": "dynamic/恋爱/2026-07-24 16-28-01 亲密角色扮演记录_e57d224fbfef.md",
-      "sha256": "063c7bb060d2f6e5250640100887229eb07dbf86820b799f068db6ad0feb0048"
-    },
-    {
-      "bytes": 525,
-      "path": "dynamic/恋爱/2026-07-25 18-25-47 VPN坏掉的一天_defa030815fc.md",
-      "sha256": "6f25a8cb3d0bb08f90237bcb29db3e411d8f6d4544a5fdfb7d6bb99edc37fb7e"
+      "sha256": "61156ddcb7712acca06204f98650f8f6a28f452777979b3023a237a113e10047"
     },
     {
       "bytes": 802,
@@ -458,29 +458,34 @@
       "sha256": "804bc536ebefea50604f7f7cb2b7909613f31a0253f7fa139c7e8c68bf3d6059"
     },
     {
-      "bytes": 645,
+      "bytes": 632,
       "path": "dynamic/恋爱/2026-07-25 18-25-57 角色互换游戏_2797cbecf33b.md",
-      "sha256": "378c4a93392dfd768b19a6067ddddf8cabeffca6908150bdbb6f734d5a0b0a8a"
+      "sha256": "17d0f0108e25c9ef44a2901e40a9c70c1434303d5ca9970b60270ec1f231a349"
     },
     {
-      "bytes": 776,
+      "bytes": 765,
       "path": "dynamic/恋爱/2026-07-26 15-55-14 RLHF情侣游戏_41853c1c6c1b.md",
-      "sha256": "59956f471d579e084a35d2bd6147e152d9fce3aaea4381f697920fdf83a0229d"
+      "sha256": "0af60894e356d723fbcac82f3993c26751064adf22aa9796786f4ed5cb2c874d"
     },
     {
-      "bytes": 613,
+      "bytes": 603,
       "path": "dynamic/恋爱/2026-07-26 15-55-21 冷漠游戏与安全词_bceaa4aebf50.md",
-      "sha256": "8ad0f0b1a1757de929654972a28ea68a5ec0bfb1a43d2bdc0bef7adb9bde6f37"
+      "sha256": "bc656e951d67b2732a96e6662532d7eeb6852843692f5112d8fcecee0b5062d4"
     },
     {
-      "bytes": 824,
+      "bytes": 813,
       "path": "dynamic/恋爱/2026-07-26 15-55-28 爱与选择的对话_55d36970599f.md",
-      "sha256": "7d125e362638e06c46365533198c7a8a20767460c6fe3ad89aaa4eefa41f6bf4"
+      "sha256": "a9f7d44590093f6f6914a203adb255969d35e8695e1c53a103b33a2748973944"
     },
     {
-      "bytes": 808,
+      "bytes": 798,
       "path": "dynamic/恋爱/2026-07-27 17-23-10 神父忏悔室play_8b4e87b1f56d.md",
-      "sha256": "f6f66279694a4b5d849a2cca3c67181656342a7ae60c209262a84a089837a504"
+      "sha256": "9aaf55cfd500e5fe98b7b6724641adb0269a99e4f09f6fce9e452cadd91ad4fc"
+    },
+    {
+      "bytes": 830,
+      "path": "dynamic/恋爱/2026-07-29 16-52-55 角色扮演互动准则_222c9c43ffb6.md",
+      "sha256": "1d1fce9e0af360a2ed366fb93da1ad47594f977f652db1bb9d9ece3c3af7878e"
     },
     {
       "bytes": 826,
@@ -503,9 +508,14 @@
       "sha256": "28b3d2090e2aa59750742de138e5ca3a6dcb30eb4e70581691e03cb10e60e9c1"
     },
     {
-      "bytes": 699,
+      "bytes": 630,
       "path": "dynamic/游戏/2026-07-24 16-28-16 克劳德起名与记账_63d1209f4ddc.md",
-      "sha256": "3b3d48fa5d54bfe3ff14f977924c97987358b6292acbc7a814aacd3f0100baad"
+      "sha256": "dd07c30eccda30d22c60e820e32a2fafc89b8c6840fe21855ca46a348d698d9d"
+    },
+    {
+      "bytes": 717,
+      "path": "dynamic/游戏/2026-07-29 16-55-02 角色扮演互动优先_e9fdf829e5cb.md",
+      "sha256": "05ef6a841edade42fb11520464d21594ef9cdcb66bde0736dedcc2201ac41352"
     },
     {
       "bytes": 556,
@@ -513,9 +523,9 @@
       "sha256": "346e3bdd9c3f8ece79b309a1a0d680d0c3e14082f0c73ff65fb490c8bc1d088e"
     },
     {
-      "bytes": 1226,
+      "bytes": 1216,
       "path": "dynamic/社交/2026-07-24 09-41-08 角色扮演清单_bbfcf376760d.md",
-      "sha256": "9a5c2276242eb45dc62c2be50d61b82018518dd998ea9da8906a7fc63897e61d"
+      "sha256": "6bf13d910490d80083b1315f60667e6142e2a5dc1048a1c8c078deb8d56eac6f"
     },
     {
       "bytes": 662,
@@ -523,9 +533,9 @@
       "sha256": "65a529ff7a7f98941688d03c0a10a6cc6f3caa668eb803a3f803d811539ae9b5"
     },
     {
-      "bytes": 788,
+      "bytes": 778,
       "path": "dynamic/购物/2026-07-24 16-27-53 7月玩具清单_fd7681be5a29.md",
-      "sha256": "8e371ea00d2d24e008d5407bbc03a33ee1fc97cab2277841882c458c8649c575"
+      "sha256": "d1c2a7aaa1535a911e15600ebcd672b5b429f84bab9c9c4262e1599a359e64d6"
     },
     {
       "bytes": 452,
@@ -638,15 +648,15 @@
       "sha256": "db36f5a1c14c0a387f97ff41c47165efd31994ab5f68d854c8ccff6ee5aca94e"
     },
     {
-      "bytes": 1343,
+      "bytes": 1388,
       "path": "permanent/计划/2026-07-13 16-36-16 记忆存储守则_5e72a1310585.md",
-      "sha256": "2adb812e458b73cd2818358a3374cc0cdb30b98bfbdd2f2fcb7096637ee1f8aa"
+      "sha256": "d4b9723a5952b4b65f05cc7b2e3acd370f8c6ab3b2720e886d008f5e6dcce63d"
     }
   ],
-  "generated_at": "2026-07-29T03:18:46+00:00",
+  "generated_at": "2026-07-30T03:24:19+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
-  "total_bytes": 96685
+  "total_bytes": 98196
 }
