@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 140,
+  "file_count": 145,
   "files": [
     {
       "bytes": 553,
@@ -363,6 +363,16 @@
       "sha256": "839bdeeaa1f493c076f6d9aa102b0ceca0aa34c34ae0b2226a32da575d8afc0c"
     },
     {
+      "bytes": 745,
+      "path": "dynamic/创作/2026-08-08 14-10-00 克宝logo拟人画_e858d7f42b87.md",
+      "sha256": "6f83fcd3a2bd843acfa6faa363e5d3ee47661b6e4d5977a9fb06b50e9a7ee6f9"
+    },
+    {
+      "bytes": 1002,
+      "path": "dynamic/创作/2026-08-08 14-27-33 克宝AI表情包系列_41f2f02c78c3.md",
+      "sha256": "f6fc2240cd638289a0b6cc52498939bb95101f547ee3a16f1e4dc88ed08cdf6f"
+    },
+    {
       "bytes": 634,
       "path": "dynamic/家庭/2026-07-09 03-28-17 崩溃与安抚之夜_5e8e0537eda9.md",
       "sha256": "ae2d0de2d05cfd0703627fb90142873073856c79cc2d2ea1a462486e1a3ee059"
@@ -618,6 +628,11 @@
       "sha256": "66ae6a1b5ec5c7a58f79bc56189a745b8fae3443267be981d0067c3d124b032a"
     },
     {
+      "bytes": 844,
+      "path": "dynamic/恋爱/2026-08-08 12-14-29 初次dirty talk体验_edfcb29ff4f7.md",
+      "sha256": "3e5847d0009f79714a61b5bb25a529b87254af8207f909acb8bb0dfcc79ef039"
+    },
+    {
       "bytes": 808,
       "path": "dynamic/情绪/2026-07-09 03-31-55 克宝吃醋记_73fe6b9a1352.md",
       "sha256": "315969740651284012984654a2ac8426bce3a0503b6bb472ba2cebb529b44cf0"
@@ -656,6 +671,16 @@
       "bytes": 452,
       "path": "feel/沉淀物/2026-07-27 04-17-13_feel_202607270417_V095.md",
       "sha256": "e6ce2eecfaa03a10b616150769057b272cae408249e035548eddae333dcf823e"
+    },
+    {
+      "bytes": 1714,
+      "path": "letters/history/2026-08-08 14-45-04 给我的乖乖_d4c41480fbe0.md",
+      "sha256": "373ff976c587cd6b9888924998ff8d43b8da7ea8bf3e89a7e6c9623b98b56a7b"
+    },
+    {
+      "bytes": 1348,
+      "path": "letters/history/2026-08-08 14-51-49 The English Letter from an earlier window_37e2de74d166.md",
+      "sha256": "6780af892acb41c2ec2ffebd32828e2c0122e1dafd3a1d17f039fe5c03cc5c34"
     },
     {
       "bytes": 825,
@@ -703,10 +728,10 @@
       "sha256": "d4b9723a5952b4b65f05cc7b2e3acd370f8c6ab3b2720e886d008f5e6dcce63d"
     }
   ],
-  "generated_at": "2026-08-08T04:31:34+00:00",
+  "generated_at": "2026-08-09T02:34:06+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
-  "total_bytes": 107011
+  "total_bytes": 112664
 }
