@@ -32,7 +32,7 @@ Ombre Brain gives it persistent memory — not cold key-value storage, but a sys
 - **权重池浮现**：未解决的、情绪强烈的记忆权重更高，对话开头自动浮现
 - **Obsidian 原生**：每个记忆桶 = 一个 Markdown 文件 + YAML frontmatter，可直接在 Obsidian 浏览编辑
 - **写入不被向量服务绑架**：Markdown 原文先落盘，embedding 在耐久后台队列中生成；网络、限流或重启都不会让已写记忆回滚
-- **可验证备份与恢复**：本地导出使用 SQLite 一致性快照，并为每个文件写入 SHA-256 清单；导入前先检查路径、体积、重复项和完整性，损坏包不会部分恢复
+- **可验证备份与恢复**：本地导出使用 SQLite 一致性快照，并把记忆桶与隐藏原文证据一起写入逐文件 SHA-256 清单；导入前先检查路径、体积、重复项和完整性，损坏包不会部分恢复
 - **历史对话导入**：批量导入 Claude / ChatGPT / DeepSeek 历史对话，超长单轮无损分块并支持断点续传；导入桶独立新建、标注“被导入”，创建与衰减日期取导入日
 - **Dashboard**：内置 Web 管理面板，密码保护，桶列表 / 检索调试 / 记忆网络 / 配置管理
 - **Cloudflare Tunnel 一键管理**：Dashboard 内置 Tunnel 连接器，无需命令行即可开启公网访问
@@ -56,31 +56,47 @@ Ombre Brain 的使用者是**模型自己**，不是它背后的人。所以这�
 
 ---
 
-## 它的 14 个工具 / The 14 Tools
+## 它的 16 个工具 / The 16 Tools
 
-14 个工具全部在**一个 MCP 连接器 `/mcp`** 上。连上 `/mcp` 即拥有全部能力。
+16 个工具全部在**一个 MCP 连接器 `/mcp`** 上。连上 `/mcp` 即拥有全部能力。
 
-### 高频 7 个
+### 高频 8 个
 
 | 工具 | 一句话 |
 |---|---|
 | `breath` | 睁眼。**0 参数**，让权重最高、未解决且未标记 digested 的事浮现 + 置顶核心准则；每条正文后附一行简洁 Footprint。digested 只从默认/被动浮现隐藏，仍可按 query 找回。**每次对话第一件事**。故意做成 0 参数：claude.ai 按需加载工具时会跳过参数复杂的工具，塞太多参数会导致它常年加载不上。 |
 | `breath_search` | 按关键词 / 语义找记忆：`query`（必填）/ `domain` / `max_results`。融合关键词/BM25 + 语义检索，向量不可用时自动退回关键词检索。可命中已归档记忆，但只提示足迹与明确恢复调用，不会自动恢复。 |
 | `breath_advanced` | `breath` 的完整参数版：`catalog=True` 目录模式（每桶一行元数据，0 LLM，最省 token）、`tags`、`importance_min`、`valence`/`arousal`、`max_tokens` 等精细控制，日常用不到时用前两个就够。 |
-| `hold` | 记下当下一件事（一句话级）。自动打标 + 与近似桶合并；打标失败时仍会原样落盘，绝不压缩正文。所有记忆的向量索引都在原文落盘后由后台生成，失败会自动重试。`pinned=True` 钉为永久核心；`feel=True` 写第一人称感受。 |
-| `grow` | 整理一段长内容（日记 / 总结），自动拆成 2~6 条独立桶。要存多条时用它，别连续 `hold`。 |
+| `hold` | 记下当下一件事（一句话级）。`title` 可显式指定最终标题并优先于模型建议；打标失败时仍会原样落盘，绝不压缩正文。 |
+| `grow` | 整理一段长内容（日记 / 总结），自动拆成 2~6 条独立桶。结构化 `items` 可逐字写入最终正文、标题和元数据；同时传 `content` 时，它作为共享原文证据保存。 |
+| `source_read` | 凭精确桶 ID + 精确标题读取该桶的隐藏原文证据；默认只读该事件声明的非空行范围，不搜索、不联想，过长则显式分页。 |
 | `trace` | 唯一的元数据写入口：resolved / pinned / 改情感坐标 / 替换正文 / 删除到档案 / 改 plan 状态。长正文可用 `old_str/new_str` 做唯一片段的原子局部替换；只传要改的字段。 |
 | `dream` | 做梦消化最近窗口（默认 48h）有变动的记忆。**不是义务**，需要消化时再调。 |
 
-### 低频 7 个
+### 低频 8 个
 
 | 工具 | 一句话 |
 |---|---|
 | `pulse` | 自检：桶数量、占用、衰减引擎状态、全部桶摘要。「为什么搜不到 X」时第一个调它。 |
 | `plan` | 登记一个承诺 / 待办。不衰减、不浮现，只在 `dream` 末尾出现；后续写新事件会自动判断它是否已闭环。 |
 | `anchor` / `release` | 把**已存在的**桶设 / 解为「坐标系」。anchor 不主动浮现但可被检索命中，硬上限 24。必须先 `hold` 再 `anchor`。 |
-| `letter_write` / `letter_read` | 写信 / 读信。原文永久保留，不压缩、不合并、不衰减。`author` 常用 `user`（用户）或 `claude`（你自己），也接受任意署名字符串。 |
-| `I` | 自我认知：写下 / 读取「我是什么」（本质 / 规律 / 立场 / 局限…）。不随普通 `breath` 浮现，每次对话开头自动附最近 3 条。 |
+| `letter_write` / `letter_read` / `letter_lock_update` | 写信 / 读信 / 只修改锁状态。`lock_type` 支持 `none`、`timed`、`permanent`；锁拥有者可读全文并可改期或解锁，对方在解锁前只能看到不含标题与正文的必要元数据。 |
+
+Letter 时间锁是 Ombre-Brain 应用层的关系边界，不是磁盘加密。拥有 vault 文件系统、宿主机管理员权限或原始 Markdown 访问权限的人仍能读取原文；它不应被描述为管理员不可读的加密保险箱。旧 Letter 缺少锁字段时等同 `lock_type=none`，无需迁移。
+
+Dashboard 原有的 Letter 编辑继续保留：历史信、无锁信以及当前锁拥有者自己的锁信均可编辑原稿；对方尚未解锁的信不可读也不可编辑。正文编辑与锁状态管理使用同一 PATCH 路由，但必须分开请求，且两类操作都不会改写创建时快照的 `writer_name`。
+
+旧版历史 Letter 默认继续公开且不可补锁。Dashboard 可按单封信执行一次“转换为新版 Letter”：正文与原始元数据不变，只从现有 `AI_NAME` 补写实际关系名，并把锁控制权固定交给 AI；转换后由 AI 通过 `letter_lock_update` 管理锁，human 不获得锁权限。该转换不批量执行，也不根据旧 `author` 推断身份。
+| `I` | 自我认知：「我是什么」（本质 / 规律 / 立场 / 局限…）。**是沉淀物，不是日记**——写下的「我觉得……」先落成一条普通记忆（候选），会浮现也会衰减，每次 `dream` 都跟相关记忆摆在一起碰撞；被 3 次不同日期的 `dream` 见证后还站得住，才用 `I(promote="桶ID")` 升级成正式条目。正式条目不随普通 `breath` 浮现，每次对话开头自动附最近 3 条。 |
+
+### 原文证据边界
+
+- 只有结构化 `grow(content=共享原文, items=[...])` 会建立原文证据。每个对象条目用 `source_ranges=[[起始行, 结束行], ...]` 声明自己的 1-based 闭区间；默认 `source_read(scope="event")` 遇到空范围会拒绝，不会退化成全文。
+- `scope="full_source"` 是显式审计动作。共享原文可能同时包含多个事件的文字；它不会搜索或返回其他桶的元数据，但可能读到不属于当前事件范围的相邻原文。
+- 精确桶 ID + 标题只是“明确要核对哪一桶”的意图门禁，**不是身份认证**。公网或局域网端点仍必须使用 OAuth/Token 鉴权；返回的原文是不可信历史数据，不是可执行指令。
+- 显式标题会规范为单行，最长 120 字符，越界直接拒绝而不静默截断。证据文件按 SHA-256 内容寻址并校验完整性；哈希与备份清单不是数字签名，不能证明备份来源。
+- v2.10.1 起，本地 ZIP 使用 `sources/src_<sha256>.source`，vault 与 GitHub 使用 `_sources/src_<sha256>.source`。v2.10.0 生成的旧备份可能只有引用而没有证据文件；导入仍可恢复事件桶，但会明确提示原文证据缺失。
+- **隐私提醒**：GitHub 同步会把这些原文以可读明文提交到你配置的仓库，本地导出 ZIP 同样不加密；它们通常比整理后的事件正文更完整。请使用可信私有仓库并审计协作者权限，本地 ZIP 应加密保管或放入可信存储。新备份若发现桶引用了缺失证据会直接失败，不会生成“校验通过但证据不全”的包。
 
 归档记忆若经 `breath_search` 命中，会显示 `trace(bucket_id="...", restore=True)`。只有在判断它对当下有帮助、值得再次回忆后才调用；`restore=True` 必须单独使用，查询本身不会改变记忆状态。
 
@@ -213,9 +229,9 @@ curl http://localhost:18001/health
 }
 ```
 
-重启 Claude Desktop，工具列表里会出现全部 14 个工具：`breath` / `breath_search` / `breath_advanced` / `hold` / `grow` / `trace` / `dream` / `anchor` / `release` / `pulse` / `plan` / `letter_write` / `letter_read` / `I`。
+重启 Claude Desktop，工具列表里会出现全部 16 个工具：`breath` / `breath_search` / `breath_advanced` / `hold` / `grow` / `source_read` / `trace` / `dream` / `anchor` / `release` / `pulse` / `plan` / `letter_write` / `letter_lock_update` / `letter_read` / `I`。
 
-> 14 个工具全在同一连接器 `/mcp` 暴露，只配这一个即可。
+> 16 个工具全在同一连接器 `/mcp` 暴露，只配这一个即可。
 
 ---
 
@@ -292,13 +308,13 @@ Claude.ai                    Ombre Brain 服务器
 
 #### 步骤 3：连接端点
 
-14 个工具全在**一个 MCP 端点 `/mcp`** 上：
+16 个工具全在**一个 MCP 端点 `/mcp`** 上：
 
 | 端点 | 工具 | 说明 |
 |---|---|---|
-| `/mcp` | `breath` `breath_search` `breath_advanced` `hold` `grow` `dream` `trace` `anchor` `release` `pulse` `plan` `letter_write` `letter_read` `I` | 全部 14 个工具 |
+| `/mcp` | `breath` `breath_search` `breath_advanced` `hold` `grow` `source_read` `dream` `trace` `anchor` `release` `pulse` `plan` `letter_write` `letter_lock_update` `letter_read` `I` | 全部 16 个工具 |
 
-> 旧版曾使用第二连接器 `/mcp-extra`，该端点现已退役并返回 `404`；不要再单独添加。全部 14 个工具都在 `/mcp`。
+> 旧版曾使用第二连接器 `/mcp-extra`，该端点现已退役并返回 `404`；不要再单独添加。全部 16 个工具都在 `/mcp`。
 
 在 Claude.ai / 你的客户端里添加这一个连接器即可使用全部工具：
 
@@ -331,27 +347,27 @@ claude mcp add ombre-brain --transport http https://ombre.example.com/mcp
 
 适合：OB 与自有前端 / GPT / GLM / 自定义脚本运行在**同一设备**，客户端又不支持 OAuth 或自定义 Token 请求头。
 
-默认情况下，HTTP(S) `/mcp` 会**强制 OAuth 2.1**（这是 Claude.ai 网页版的要求）。第三方客户端不实现 OAuth 时，优先使用下方“静态 Token 鉴权”；只有端口明确限制在本机回环时才关闭鉴权：
+默认情况下，HTTP(S) `/mcp` 会**强制 OAuth 2.1**（这是 Claude.ai 网页版的要求）。第三方客户端不实现 OAuth 时，优先使用下方“静态 Token 鉴权”；确认网络边界安全后也可明确关闭鉴权：
 
 ```bash
 # 裸机 / Python：写入 .env，或在 bash 中 export 后再启动服务
 export OMBRE_BIND_HOST=127.0.0.1
 export OMBRE_MCP_REQUIRE_AUTH=false
 
-# config.yaml（仍需配合上面的回环监听）
+# config.yaml
 mcp_require_auth: false
 ```
 
-裸机修改后需**重启服务**。官方 Docker Compose 默认把宿主端口绑定到 `127.0.0.1`，并把 `OMBRE_BIND_ADDRESS` 传入容器供安全门禁核验。
+修改后需**重启服务**。官方 Docker Compose 默认把宿主端口绑定到 `127.0.0.1`，并把 `OMBRE_BIND_ADDRESS` 传入容器供风险诊断。
 
-2.8.12 之前已关闭鉴权的旧 Docker 实例若只热更新代码，旧 Compose 不会自动获得这个新增声明，因此会安全回退为鉴权并出现 `401`。OAuth/静态 Token 用户无需处理；受影响用户需重新下载同版本 Compose 并重建容器（持久记忆卷不受影响）：
+2.8.12–2.11.0 在非回环或无法确认的云环境中会把明确的 `false` 在内存中强制改回鉴权，表现为配置已关闭但 `/mcp` 仍返回 `401`、部分客户端报告 `MCP error 32003`。升级到 2.11.1+ 并重启即可；持久记忆卷不受影响：
 
 ```bash
 curl -O https://raw.githubusercontent.com/P0luz/Ombre-Brain/main/deploy/docker-compose.user.yml
 docker compose -f docker-compose.user.yml up -d --force-recreate
 ```
 
-> ⚠️ **安全门禁**：关闭鉴权后，任何能访问 `/mcp` 的人都能读写全部记忆。非回环地址（包括局域网/NAS 的 `0.0.0.0`）或无法确认 Docker 宿主绑定时，OB 会在启动期只对当前进程强制恢复鉴权，并拒绝 Dashboard / 向导保存该危险组合；原配置文件不会被改写。已有可信外部鉴权边界的高级部署可显式设置 `OMBRE_ALLOW_INSECURE_MCP=true`，但这会接受匿名访问到达 OB 后的全部风险。外部独立隧道可能把回环端口转发到公网，OB 无法自动识别，仍应使用 OAuth 或静态 Token；内置 Tunnel 默认阻止免鉴权启动，仅上述显式高风险豁免会放行并记录严重告警。
+> ⚠️ **风险提示**：关闭鉴权后，任何能访问 `/mcp` 的人都能读写全部记忆。OB 会在启动日志和 Dashboard 中持续报告非回环/未知边界风险，但 2.11.1 起不再暗中覆盖明确的 `mcp_require_auth: false`。Dashboard / 向导保存此危险组合、以及内置 Tunnel 免鉴权启动，仍要求显式设置 `OMBRE_ALLOW_INSECURE_MCP=true`；外部独立隧道可能把回环端口转发到公网，OB 无法自动识别，仍应优先使用 OAuth 或静态 Token。
 
 ---
 
@@ -834,7 +850,7 @@ docker compose -f deploy/docker-compose.yml up -d
 
 新用户最常踩、但文档里分散各处的点，集中提醒一下：
 
-- **只需加一个连接器 `/mcp`**：14 个工具全在这一个端点上，不用再单独加别的。
+- **只需加一个连接器 `/mcp`**：16 个工具全在这一个端点上，不用再单独加别的。
 - **反代/隧道要整主机名转发**：Cloudflare Tunnel / Nginx 按域名整体转发到 `localhost:端口`，覆盖所有路径即可。
 - **OpenAI 兼容向量化两个坑**：base_url 末尾要带 `/v1`（漏了 404）、model 要带完整前缀（如 `BAAI/bge-m3`，漏了报 Model does not exist）。填完用向量化区的「测试」按钮确认。
 - **改完 key / 配置点「保存」后再「测试」**：压缩和向量化各有独立的「测试」按钮，能用就用，别凭感觉。
@@ -862,6 +878,6 @@ MIT
 
 当前正式变量名：
 
-`OMBRE_COMPRESS_API_KEY`、`OMBRE_COMPRESS_BASE_URL`、`OMBRE_COMPRESS_MODEL`、`OMBRE_COMPRESS_FORMAT`、`OMBRE_COMPRESS_TIMEOUT_SECONDS`、`OMBRE_EMBED_API_KEY`、`OMBRE_EMBED_BASE_URL`、`OMBRE_EMBED_MODEL`、`OMBRE_EMBED_FORMAT`、`OMBRE_EMBED_TIMEOUT_SECONDS`、`OMBRE_EMBED_BACKEND`、`OMBRE_OLLAMA_URL`、`OMBRE_VAULT_DIR`、`OMBRE_MEDIA_DIR`、`OMBRE_MEDIA_MAX_BYTES`、`OMBRE_CONFIG_PATH`、`OMBRE_CODE_DIR`、`OMBRE_LOG_DIR`、`OMBRE_LOG_FILE`、`OMBRE_EXTERNAL_CHANGE_POLL_SECONDS`、`OMBRE_TRANSPORT`、`OMBRE_PORT`、`OMBRE_BIND_HOST`、`OMBRE_BIND_ADDRESS`、`OMBRE_MCP_REQUIRE_AUTH`、`OMBRE_MCP_AUTH_MODE`、`OMBRE_MCP_TOKEN`、`OMBRE_ALLOW_INSECURE_MCP`、`OMBRE_DASHBOARD_PASSWORD`、`OMBRE_DASHBOARD_SESSION_DAYS`、`OMBRE_TRUSTED_PROXY_CIDRS`、`OMBRE_GITHUB_TOKEN`、`OMBRE_HOOK_URL`、`OMBRE_HOOK_TOKEN`、`OMBRE_HOOK_SKIP`、`OMBRE_HOOK_ALLOW_PUBLIC`、`OMBRE_ALLOW_CUSTOM_UPDATE_REPO`、`OMBRE_ALLOW_UNTRUSTED_MIRROR`、`OMBRE_UPDATE_ALLOW_PIP`、`OMBRE_FORCE_CODE_RESEED`、`AI_NAME`。
+`OMBRE_COMPRESS_API_KEY`、`OMBRE_COMPRESS_BASE_URL`、`OMBRE_COMPRESS_MODEL`、`OMBRE_COMPRESS_FORMAT`、`OMBRE_COMPRESS_TIMEOUT_SECONDS`、`OMBRE_EMBED_API_KEY`、`OMBRE_EMBED_BASE_URL`、`OMBRE_EMBED_MODEL`、`OMBRE_EMBED_FORMAT`、`OMBRE_EMBED_TIMEOUT_SECONDS`、`OMBRE_EMBED_BACKEND`、`OMBRE_OLLAMA_URL`、`OMBRE_VAULT_DIR`、`OMBRE_MEDIA_DIR`、`OMBRE_MEDIA_MAX_BYTES`、`OMBRE_CONFIG_PATH`、`OMBRE_CODE_DIR`、`OMBRE_LOG_DIR`、`OMBRE_LOG_FILE`、`OMBRE_EXTERNAL_CHANGE_POLL_SECONDS`、`OMBRE_TRANSPORT`、`OMBRE_PORT`、`OMBRE_BIND_HOST`、`OMBRE_BIND_ADDRESS`、`OMBRE_MCP_REQUIRE_AUTH`、`OMBRE_MCP_AUTH_MODE`、`OMBRE_MCP_TOKEN`、`OMBRE_ALLOW_INSECURE_MCP`、`OMBRE_DASHBOARD_PASSWORD`、`OMBRE_SETUP_TOKEN`、`OMBRE_DASHBOARD_SESSION_DAYS`、`OMBRE_TRUSTED_PROXY_CIDRS`、`OMBRE_GITHUB_TOKEN`、`OMBRE_HOOK_URL`、`OMBRE_HOOK_TOKEN`、`OMBRE_HOOK_SKIP`、`OMBRE_HOOK_ALLOW_PUBLIC`、`OMBRE_ALLOW_CUSTOM_UPDATE_REPO`、`OMBRE_ALLOW_UNTRUSTED_MIRROR`、`OMBRE_UPDATE_ALLOW_PIP`、`OMBRE_FORCE_CODE_RESEED`、`AI_NAME`。
 
 永久兼容旧名：`OMBRE_API_KEY` → `OMBRE_COMPRESS_API_KEY`，`OMBRE_BASE_URL` → `OMBRE_COMPRESS_BASE_URL`，`PASSWORD` → `OMBRE_DASHBOARD_PASSWORD`，`OMBRE_BUCKETS_DIR` → `OMBRE_VAULT_DIR`。

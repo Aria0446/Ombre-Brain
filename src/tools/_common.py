@@ -37,7 +37,7 @@ import math
 import threading
 
 from bucket_manager import _filesystem_turn as _kernel_filesystem_turn
-from utils import parse_bool
+from utils import normalize_memory_title, parse_bool
 from ombrebrain.domain.plan_history import append_plan_change_log as append_plan_change_log
 
 from . import _runtime as rt
@@ -62,6 +62,10 @@ _DEFAULT_MAX_GROW_INPUT_BYTES = 2 * 1024 * 1024
 _DEFAULT_MAX_QUERY_BYTES = 16 * 1024
 _DEFAULT_MAX_METADATA_BYTES = 16 * 1024
 _DEFAULT_MAX_GROW_ITEMS = 100
+_GROW_ITEM_FIELDS = frozenset({
+    "content", "title", "name", "tags", "importance", "domain",
+    "valence", "arousal", "source_ranges",
+})
 
 # --- importance≥9 配额（rule.md §1.0 哲学） ---
 _HIGH_IMP_THRESHOLD = 9                # importance 达到该值算“高重要度”
@@ -347,22 +351,69 @@ def check_grow_items_payload(items: list) -> str | None:
     if item_cap > 0 and len(items) > item_cap:
         return f"grow items 过多（{len(items)} > 上限 {item_cap}）。请分批调用，或调整 config.limits.max_grow_items。"
 
+    from ombrebrain.storage.source_store import normalize_source_ranges
+
     byte_cap = max_grow_input_bytes()
-    if byte_cap <= 0:
-        return None
     total = 0
-    for item in items:
+    for index, item in enumerate(items, start=1):
         if isinstance(item, str):
             value = item
         elif isinstance(item, dict):
-            value = item.get("content", "")
+            unknown = sorted(str(key) for key in item if key not in _GROW_ITEM_FIELDS)
+            if unknown:
+                return f"grow items 第 {index} 项包含未支持字段: {', '.join(unknown)}"
+            value = item.get("content")
+            if not isinstance(value, str):
+                return f"grow items 第 {index} 项 content 必须是字符串。"
+            for field in ("title", "name"):
+                raw_text = item.get(field)
+                if raw_text is not None and not isinstance(raw_text, str):
+                    return f"grow items 第 {index} 项 {field} 必须是字符串。"
+            try:
+                normalize_memory_title(item.get("title"))
+            except ValueError as exc:
+                return f"grow items 第 {index} 项 {exc}"
+            for field in ("tags", "domain"):
+                raw_list = item.get(field)
+                if raw_list is not None and not (
+                    isinstance(raw_list, str)
+                    or (
+                        isinstance(raw_list, list)
+                        and all(isinstance(part, str) for part in raw_list)
+                    )
+                ):
+                    return f"grow items 第 {index} 项 {field} 必须是字符串或字符串列表。"
+            if item.get("importance") is not None:
+                importance = item["importance"]
+                if isinstance(importance, bool) or not isinstance(importance, int):
+                    return f"grow items 第 {index} 项 importance 必须是 1-10 的整数。"
+                if not 1 <= importance <= 10:
+                    return f"grow items 第 {index} 项 importance 必须是 1-10 的整数。"
+            for field in ("valence", "arousal"):
+                raw_number = item.get(field)
+                if raw_number is None:
+                    continue
+                if isinstance(raw_number, bool):
+                    return f"grow items 第 {index} 项 {field} 必须是 0-1 的数字。"
+                try:
+                    number = float(raw_number)
+                except (TypeError, ValueError, OverflowError):
+                    return f"grow items 第 {index} 项 {field} 必须是 0-1 的数字。"
+                if not math.isfinite(number) or not 0 <= number <= 1:
+                    return f"grow items 第 {index} 项 {field} 必须是 0-1 的数字。"
+            try:
+                normalize_source_ranges(item.get("source_ranges"))
+            except ValueError as exc:
+                return f"grow items 第 {index} 项 {exc}"
         else:
-            continue
+            return f"grow items 第 {index} 项必须是字符串或对象。"
+        if not value.strip():
+            return f"grow items 第 {index} 项 content 不能为空，未创建任何桶。"
         try:
-            total += len(str(value or "").encode("utf-8"))
+            total += len(value.encode("utf-8"))
         except Exception:
             return "grow items 包含无法安全序列化的 content。"
-        if total > byte_cap:
+        if byte_cap > 0 and total > byte_cap:
             return f"grow items 正文总量过大（{total / 1024:.1f} KB > 上限 {byte_cap / 1024:.0f} KB）。请分批调用。"
     return None
 
@@ -654,6 +705,8 @@ async def merge_or_create(
     valence: float,
     arousal: float,
     name: str = "",
+    title: str = "",
+    source_refs: list | None = None,
     raw_merge: bool = False,
     why_remembered: str = "",
     source_tool: str = "",
@@ -683,7 +736,8 @@ async def merge_or_create(
     async with _content_turn(content):
         result = await _merge_or_create_inner(
             content=content, tags=tags, importance=importance, domain=domain,
-            valence=valence, arousal=arousal, name=name, raw_merge=raw_merge,
+            valence=valence, arousal=arousal, name=name, title=title,
+            source_refs=source_refs, raw_merge=raw_merge,
             why_remembered=why_remembered, source_tool=source_tool,
             grow_batch_id=grow_batch_id, meaning=meaning, media=media,
             test_data=test_data,
@@ -710,6 +764,8 @@ async def _merge_or_create_inner(
     valence: float,
     arousal: float,
     name: str = "",
+    title: str = "",
+    source_refs: list | None = None,
     raw_merge: bool = False,
     why_remembered: str = "",
     source_tool: str = "",
@@ -770,7 +826,13 @@ async def _merge_or_create_inner(
                         metadata = {}
                     if parse_bool(metadata.get("pinned"), default=False) or parse_bool(
                         metadata.get("protected"), default=False
-                    ) or is_terminal_memory_metadata(metadata):
+                    ) or is_terminal_memory_metadata(metadata) or str(
+                        metadata.get("i_stage") or ""
+                    ) == "candidate":
+                        # 待沉淀的 I 候选不能当合并目标：它是「我对我自己的一个判断」，
+                        # 不是时间里发生的事，把一件事追加进去语义上就错了；而且沉淀
+                        # 要问的是「几轮梦之后它还站得住吗」，正文被改写就没有对象了。
+                        # i_stage 的真源在 tools/i（这里不反向导入，避免循环依赖）。
                         break
                     snapshot_content = str(bucket.get("content") or "")
                     snapshot_metadata = deepcopy(metadata)
@@ -833,14 +895,31 @@ async def _merge_or_create_inner(
                     )
                     update_kwargs = {
                         "content": merged,
-                        "tags": list(set((metadata.get("tags") or []) + tags)),
+                        "tags": list(dict.fromkeys(tags + (metadata.get("tags") or []))),
                         "importance": merged_importance,
                         "domain": list(
-                            set((metadata.get("domain") or []) + domain)
+                            dict.fromkeys(domain + (metadata.get("domain") or []))
                         ),
                         "valence": merged_valence,
                         "arousal": merged_arousal,
                     }
+                    if title:
+                        update_kwargs["title"] = title
+                        old_name = str(metadata.get("name") or "")
+                        timestamp_prefix = old_name[:19]
+                        if (
+                            len(timestamp_prefix) == 19
+                            and timestamp_prefix[4] == "-"
+                            and timestamp_prefix[7] == "-"
+                            and timestamp_prefix[10] == " "
+                            and timestamp_prefix[13] == "-"
+                            and timestamp_prefix[16] == "-"
+                        ):
+                            update_kwargs["name"] = f"{timestamp_prefix} {title}"
+                        else:
+                            update_kwargs["name"] = title
+                    if source_refs:
+                        update_kwargs["source_refs_append"] = source_refs
                     if source_tool:
                         update_kwargs["last_merged_by"] = source_tool
                     if meaning:
@@ -963,12 +1042,15 @@ async def _merge_or_create_inner(
             valence=valence,
             arousal=arousal,
             name=name or None,
+            title=title,
             why_remembered=why_remembered,
             source_tool=source_tool,
+            event_actor="llm",
             grow_batch_id=grow_batch_id,
             meaning=meaning,
             media=media,
             test_data=test_data,
+            source_refs=source_refs,
             defer_derived_index=_defer_derived_index,
             # hold 的铁律：正文优先落盘。打标/embedding 可降级，但绝不压缩或撤销记忆。
             allow_embedding_fallback=(raw_merge and source_tool == "hold"),

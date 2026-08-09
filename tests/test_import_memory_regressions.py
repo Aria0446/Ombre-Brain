@@ -19,11 +19,43 @@ from import_memory import (
     ImportEngine,
     ImportState,
     _EXTRACT_TOKEN_CEILING,
+    _safe_import_error_detail,
     chunk_turns,
+    diagnose_import_errors,
 )
 from tools import _runtime as rt
 from tools._common import count_high_importance
 from utils import count_tokens_approx
+
+
+def test_import_error_diagnostics_cover_known_and_unknown_provider_errors():
+    diagnostics = diagnose_import_errors(
+        [
+            "LLM 提取失败：Model does not exist: deepseek-v3",
+            "balance is insufficient",
+            "token ceiling reached, truncating",
+            "provider exploded with code 599",
+        ]
+    )
+
+    assert [item["code"] for item in diagnostics] == [
+        "model_not_found",
+        "insufficient_balance",
+        "token_ceiling",
+        "unknown",
+    ]
+    assert all(item["solution"] for item in diagnostics[:3])
+    assert diagnostics[3]["solution"] == ""
+    assert diagnostics[3]["error"] == "provider exploded with code 599"
+
+
+def test_import_provider_error_detail_redacts_credentials():
+    detail = _safe_import_error_detail(
+        RuntimeError("api_key=sk-secretvalue123456 balance is insufficient")
+    )
+
+    assert "secretvalue" not in detail
+    assert "[REDACTED]" in detail
 
 
 class FakeDehydrator:
@@ -56,6 +88,7 @@ class FakeBucketManager:
             "id": bid, "content": content, "domain": domain or [],
             "tags": tags or [], "name": name,
             "source_tool": _kw.get("source_tool"),
+            "event_actor": _kw.get("event_actor"),
             "imported": _kw.get("imported", False),
         })
         return bid
@@ -77,6 +110,51 @@ class FakeBucketManager:
 
     async def update(self, bucket_id, **_kw):
         return True
+
+
+@pytest.mark.asyncio
+async def test_structured_json_import_is_deterministic_and_skips_llm(tmp_path):
+    bucket_mgr = FakeBucketManager()
+    dehydrator = FakeDehydrator()
+    dehydrator.api_available = False
+    engine = ImportEngine(
+        {"buckets_dir": str(tmp_path), "human": "阿明"},
+        bucket_mgr,
+        dehydrator,
+    )
+    raw = json.dumps([
+        {
+            "name": "第一条",
+            "content": "人工整理的第一条记忆。",
+            "domain": ["回忆"],
+            "valence": 0.6,
+            "arousal": 0.3,
+            "tags": ["人工"],
+            "importance": 6,
+        },
+        {
+            "name": "第二条",
+            "content": "人工整理的第二条记忆。",
+            "domain": ["计划"],
+            "valence": 0.5,
+            "arousal": 0.4,
+            "tags": [],
+            "importance": 7,
+        },
+    ], ensure_ascii=False)
+
+    result = await engine.start(raw, filename="memories.json")
+
+    assert result["status"] == "completed"
+    assert result["api_calls"] == 0
+    assert result["memories_created"] == 2
+    assert dehydrator.chat_calls == []
+    assert [item["content"] for item in bucket_mgr.created] == [
+        "人工整理的第一条记忆。",
+        "人工整理的第二条记忆。",
+    ]
+    assert all(item["source_tool"] == "import" for item in bucket_mgr.created)
+    assert all(item["event_actor"] == "human" for item in bucket_mgr.created)
 
 
 # ------------------------------------------------------------

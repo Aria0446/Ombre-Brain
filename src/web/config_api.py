@@ -40,6 +40,11 @@ from ombrebrain.security.public_origin import configured_public_origin
 from . import _shared as sh
 
 try:
+    from dehydrator import chat_completion_token_limit
+except ImportError:  # pragma: no cover
+    from ..dehydrator import chat_completion_token_limit
+
+try:
     from utils import (  # type: ignore
         get_ai_name as _get_ai_name,
         get_owner_name as _get_owner_name,
@@ -385,6 +390,13 @@ def register(mcp) -> None:
                     {"error": "surfacing must be an object"}, status_code=400
                 )
             dehydration_payload = dict(body.get("dehydration") or {})
+            if "extra_body" in dehydration_payload and not isinstance(
+                dehydration_payload["extra_body"], dict
+            ):
+                return JSONResponse(
+                    {"error": "dehydration.extra_body must be an object"},
+                    status_code=400,
+                )
             if "max_tokens" in dehydration_payload:
                 dehydration_payload["max_tokens"] = _bounded_config_int(
                     dehydration_payload["max_tokens"],
@@ -572,6 +584,7 @@ def register(mcp) -> None:
             "temperature",
             "timeout_seconds",
             "api_format",
+            "extra_body",
             "api_key",
             "api_available",
             "client",
@@ -595,7 +608,7 @@ def register(mcp) -> None:
         if "dehydration" in body:
             d = dehydration_payload
             dehy = sh.config.setdefault("dehydration", {})
-            for key in ("model", "base_url", "max_tokens", "temperature", "api_format", "timeout_seconds"):
+            for key in ("model", "base_url", "max_tokens", "temperature", "api_format", "timeout_seconds", "extra_body"):
                 if key in d:
                     dehy[key] = d[key]
                     updated.append(f"dehydration.{key}")
@@ -611,6 +624,7 @@ def register(mcp) -> None:
                 sh.dehydrator.temperature = float(configured_temperature)
             sh.dehydrator.timeout_seconds = _positive_float(dehy.get("timeout_seconds"), sh.dehydrator.timeout_seconds)
             sh.dehydrator.api_format = dehy.get("api_format", getattr(sh.dehydrator, "api_format", "openai_compat"))
+            sh.dehydrator.extra_body = dict(dehy.get("extra_body") or {})
             if "api_key" in d and d["api_key"]:
                 sh.dehydrator.api_key = dehy["api_key"]
             sh.dehydrator.api_available = bool(sh.dehydrator.api_key)
@@ -717,7 +731,7 @@ def register(mcp) -> None:
                     if not isinstance(sc_dehy, dict):
                         sc_dehy = {}
                         save_config["dehydration"] = sc_dehy
-                    for key in ("model", "base_url", "max_tokens", "temperature", "api_format", "timeout_seconds"):
+                    for key in ("model", "base_url", "max_tokens", "temperature", "api_format", "timeout_seconds", "extra_body"):
                         if key in dehydration_payload:
                             sc_dehy[key] = dehydration_payload[key]
                     # Never persist api_key to yaml (use env var)
@@ -949,7 +963,11 @@ def register(mcp) -> None:
         try:
             import httpx as _httpx
             headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-            payload = {"model": model, "messages": [{"role": "user", "content": "hi"}], "max_tokens": 5}
+            payload = {
+                "model": model,
+                "messages": [{"role": "user", "content": "hi"}],
+                **chat_completion_token_limit(model, 5),
+            }
             async with _httpx.AsyncClient(timeout=15) as client:
                 r = await client.post(f"{base_url.rstrip('/')}/chat/completions", json=payload, headers=headers)
             if r.status_code in (200, 201):
@@ -1397,17 +1415,18 @@ def register(mcp) -> None:
         return JSONResponse(response)
 
 
-    # --- 传输模式热切换：streamable-http / stdio / sse（legacy）---
-    # transport 是「启动时绑定」的（server.py 据此起 streamable_http_app / sse_app / stdio），
+    # --- 传输模式热切换：streamable-http / stdio ---
+    # transport 是「启动时绑定」的（server.py 据此起 streamable_http_app / stdio），
     # 运行中无法无缝切换，所以这里的做法是：持久化新值 → 原地自重启（os.execv 继承已改的
     # os.environ，绕过 compose 里硬编码的旧 OMBRE_TRANSPORT）→ 新进程按新 transport 起。
-    _TRANSPORT_CHOICES = ("streamable-http", "sse", "stdio")
+    # 2026-08-09 起 legacy SSE（"sse"）已下线，不再是可选项。
+    _TRANSPORT_CHOICES = ("streamable-http", "stdio")
 
     @mcp.custom_route("/api/transport", methods=["POST"])
     async def api_transport_set(request: Request) -> Response:
         """切换 MCP 传输模式并自重启生效。
 
-        Body (JSON): {"transport": "streamable-http" | "sse" | "stdio"}
+        Body (JSON): {"transport": "streamable-http" | "stdio"}
 
         ⚠️ stdio 没有 HTTP 服务：切到 stdio 后 Dashboard / REST / /mcp(HTTP) 全部消失，
         且无法再从网页切回（需在服务器改 config.yaml / env 恢复）。前端对此二次确认。

@@ -29,9 +29,9 @@ from starlette.responses import FileResponse, Response
 from . import _shared as sh
 
 try:
-    from utils import parse_bool, sanitize_name  # type: ignore
+    from utils import normalize_memory_title, parse_bool, sanitize_name  # type: ignore
 except ImportError:  # pragma: no cover
-    from ..utils import parse_bool, sanitize_name  # type: ignore
+    from ..utils import normalize_memory_title, parse_bool, sanitize_name  # type: ignore
 
 from ombrebrain.storage.backup_archive import (
     MAX_ARCHIVE_BYTES,
@@ -476,13 +476,15 @@ def register(mcp) -> None:
                 )
             raw_content = ""
             llm_ready = _import_llm_ready()
+            requires_llm = bool(preview.get("requires_llm", True))
             return JSONResponse({
                 **preview,
                 "filename": filename,
                 "size_bytes": size_bytes,
                 "import_running": False,
                 "llm_ready": llm_ready,
-                "can_start": bool(preview.get("ok")) and llm_ready,
+                "can_start": bool(preview.get("ok"))
+                and (llm_ready or not requires_llm),
             })
         finally:
             history_ingest_lock.release()
@@ -934,7 +936,7 @@ def register(mcp) -> None:
             return JSONResponse({"error": "invalid JSON"}, status_code=400)
 
         field_order = (
-            "name", "type", "tags", "domain", "importance", "resolved",
+            "name", "title", "type", "tags", "domain", "importance", "resolved",
             "pinned", "digested", "dont_surface", "why_remembered",
             "weight", "content",
         )
@@ -991,6 +993,8 @@ def register(mcp) -> None:
                     return None
             if field == "why_remembered":
                 return str(raw or "")
+            if field == "title":
+                return str(raw or "")
             if field == "type":
                 return str(raw or "dynamic").strip().lower()
             return raw
@@ -1031,12 +1035,44 @@ def register(mcp) -> None:
 
         updates: dict = {}
 
+        explicit_name_changed = False
         if "name" in body:
             if not isinstance(body["name"], str) or not body["name"].strip():
                 return reject("name must be a non-empty string")
             name = sanitize_name(body["name"].strip())
             if name != before_values["name"]:
                 updates["name"] = name
+                explicit_name_changed = True
+
+        if "title" in body:
+            if not isinstance(body["title"], str):
+                return reject("title must be a string")
+            try:
+                title = normalize_memory_title(body["title"])
+            except ValueError as exc:
+                return reject(str(exc))
+            if not title:
+                return reject("title must be a non-empty string")
+            if title != before_values["title"]:
+                updates["title"] = title
+                # name 是带时间前缀的展示/文件名兼容字段。若调用方没有
+                # 同时明确修改 name，则与 title 在同一次 update 中同步。
+                if not explicit_name_changed:
+                    current_name = str(before_values["name"] or "")
+                    prefix = current_name[:19]
+                    has_timestamp = bool(
+                        len(prefix) == 19
+                        and prefix[4:5] == "-"
+                        and prefix[7:8] == "-"
+                        and prefix[10:11] == " "
+                        and prefix[13:14] == "-"
+                        and prefix[16:17] == "-"
+                    )
+                    derived_name = sanitize_name(
+                        f"{prefix} {title}" if has_timestamp else title
+                    )
+                    if derived_name != before_values["name"]:
+                        updates["name"] = derived_name
 
         for field, max_items in (("tags", 64), ("domain", 16)):
             if field not in body:
@@ -1120,6 +1156,13 @@ def register(mcp) -> None:
                 requested_pinned = parse_bool(body["pinned"])
             except ValueError as e:
                 return reject(str(e))
+
+        unpinning_now = current_pinned and not requested_pinned and not protected
+        if unpinning_now and requested_importance is None:
+            return reject(
+                "unpinning requires importance from 1 to 10 in the same edit",
+                field="importance",
+            )
 
         type_changed = requested_type != current_type
         if type_changed:
@@ -1347,7 +1390,11 @@ def register(mcp) -> None:
                 ):
                     expected_values["type"] = "dynamic"
 
-                ok = await sh.bucket_mgr.update(bucket_id, **updates)
+                ok = await sh.bucket_mgr.update(
+                    bucket_id,
+                    event_actor="human",
+                    **updates,
+                )
                 if not ok:
                     latest = await sh.bucket_mgr.get(bucket_id)
                     if _is_terminal_memory_metadata(
