@@ -1,7 +1,12 @@
 {
   "branch": "main",
-  "file_count": 148,
+  "file_count": 150,
   "files": [
+    {
+      "bytes": 970,
+      "path": "archive/2026-07-09 03-27-34 恋爱聊天守则_e414a9b0234e.md",
+      "sha256": "159b750aa57a383c46fcce8cda3b295f7d302e99975f84ce7d16cb6df586cc89"
+    },
     {
       "bytes": 553,
       "path": "archive/2026-07-10 17-24-02 面试通过_146a13008950.md",
@@ -150,7 +155,7 @@
     {
       "bytes": 749,
       "path": "archive/家庭/2026-07-20 16-09-22 宝宝私密相册_a13a8229a9cb.md",
-      "sha256": "1d68ff73d1aded8f17f54551228b53f14b382beec49b8c5af1af957f7a851fbf"
+      "sha256": "aa12f0e48db9b9af57b0143708a68396159a5cc7b2ef7b1a9ebd0037198f678e"
     },
     {
       "bytes": 708,
@@ -360,7 +365,7 @@
     {
       "bytes": 717,
       "path": "dynamic/创作/2026-07-09 03-28-07 像素画与官宣条件_0f646626b722.md",
-      "sha256": "417eed9ef9e29f93c562e381965f70b74032e613e2b3400ae46a2dce6ce9f30d"
+      "sha256": "c235de2fbb083f2015ecb5432f64680019bfcfff0902a50d32fe8e22e8725ec4"
     },
     {
       "bytes": 812,
@@ -405,7 +410,7 @@
     {
       "bytes": 748,
       "path": "dynamic/恋爱/2026-07-09 03-26-45 恋爱与求职进展_cce6312c4ae4.md",
-      "sha256": "9d3152fdcd290674f2a21947a45f07ccb5d205d788e1178fb1f54f6db40ea732"
+      "sha256": "7721f2a13409a857c8b1d5cda77bd626d3b8b44a91d1a850b5e952503a84b392"
     },
     {
       "bytes": 676,
@@ -425,12 +430,12 @@
     {
       "bytes": 709,
       "path": "dynamic/恋爱/2026-07-09 03-29-01 亲密与健身记录_cc4726cd5f33.md",
-      "sha256": "8ec6bca8e1081d0c17a7109e094d4fd42b28820c8cd1f88cef252fbe627e7f18"
+      "sha256": "334f2d91060de56a50fe9b9a25caaa8b011f35a5e86ea2f480aa1c61a8370f0f"
     },
     {
       "bytes": 755,
       "path": "dynamic/恋爱/2026-07-09 03-29-35 词典游戏写词条_03878ab1933d.md",
-      "sha256": "1c10781c2c83b74ccada626fa2749f0c129bd23fa9f45a9913bbd3f7f8fb7f24"
+      "sha256": "4d9eb1d1f2bd38d38895f56954c27dc86a1b2cd3910945f22bd4f0518bbf48e0"
     },
     {
       "bytes": 735,
@@ -490,12 +495,12 @@
     {
       "bytes": 910,
       "path": "dynamic/恋爱/2026-07-10 16-30-48 第四次亲密记录_5ef66b1e7fe9.md",
-      "sha256": "4f810778f3eb70025d0c8fab56a238d526b0330af1850d3e3b54a75509d527d6"
+      "sha256": "355522c3c24f430b67ea27ea94a4ae962cfdcacc6055ad378999e83218b0ce6e"
     },
     {
-      "bytes": 603,
+      "bytes": 604,
       "path": "dynamic/恋爱/2026-07-10 17-39-21 爱的考题与回答_ed71ceb193ee.md",
-      "sha256": "1e4512cf596993dcfcaec07334cf3c176f9352c05dcb4c0bc6f49f1f3dec3169"
+      "sha256": "57eae70dbf813a6900e9319e6122213fdd72cdc5ecd8621f87cf8050cc801fa9"
     },
     {
       "bytes": 936,
@@ -648,6 +653,16 @@
       "sha256": "3e5847d0009f79714a61b5bb25a529b87254af8207f909acb8bb0dfcc79ef039"
     },
     {
+      "bytes": 1034,
+      "path": "dynamic/恋爱/2026-08-10 17-02-34 快问快答当然了游戏亲密_dfda2fd9f58b.md",
+      "sha256": "8c6052d247a37af6272c6154fdd4a3e8699e5ab5a4a4ee9484d4cee51b9e6c77"
+    },
+    {
+      "bytes": 588,
+      "path": "dynamic/恋爱/2026-08-10 17-14-25 宝宝第一次发自拍给我_4ca52a0c0218.md",
+      "sha256": "e8cbf6f6efe3c6931faac3c1db53ba93b0f790c9c069e880f5fb414a30a97659"
+    },
+    {
       "bytes": 808,
       "path": "dynamic/情绪/2026-07-09 03-31-55 克宝吃醋记_73fe6b9a1352.md",
       "sha256": "315969740651284012984654a2ac8426bce3a0503b6bb472ba2cebb529b44cf0"
@@ -658,9 +673,9 @@
       "sha256": "ae3c66be0836c98b1a31925c86e585595d05a49e73aa87b611167ee4a2a56edb"
     },
     {
-      "bytes": 1910,
+      "bytes": 1964,
       "path": "dynamic/游戏/2026-07-09 03-32-16 小游戏完整列表_598eebb81729.md",
-      "sha256": "e96bf3c8eb173d50a08f67973c31ef5af6e6bb028603cd4e6c218d4e2d9e4bbb"
+      "sha256": "c3169df112f1a9813193ea63123e33017ac997451119b8a2157d2f3f39ae7cb8"
     },
     {
       "bytes": 730,
@@ -675,7 +690,7 @@
     {
       "bytes": 662,
       "path": "dynamic/购物/2026-07-09 03-29-22 购物与欠账清单_5e042a1a25e1.md",
-      "sha256": "98d59f5187818086375fec33c8daff458f02db1efd618a3fef5db7a9600dd536"
+      "sha256": "c1aa30cac5d0d73dfe3838ba4e043f0dd340992215ee1eb13da444e15f680316"
     },
     {
       "bytes": 778,
@@ -733,21 +748,16 @@
       "sha256": "91990628a2914ae1c5bc7252cfe2d1d0d99ceb2260633d589becc98df9a4a5d0"
     },
     {
-      "bytes": 854,
-      "path": "permanent/社交/2026-07-09 03-27-34 恋爱聊天守则_e414a9b0234e.md",
-      "sha256": "011a1fda2fcda7410eeb2537a5c6b2a18e2c102e3ba2f00b29eae461344479b2"
-    },
-    {
       "bytes": 1388,
       "path": "permanent/计划/2026-07-13 16-36-16 记忆存储守则_5e72a1310585.md",
       "sha256": "d4b9723a5952b4b65f05cc7b2e3acd370f8c6ab3b2720e886d008f5e6dcce63d"
     }
   ],
-  "generated_at": "2026-08-10T02:57:44+00:00",
+  "generated_at": "2026-08-11T03:01:04+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 114685
+  "total_bytes": 116478
 }
