@@ -1,3 +1,4 @@
+import ast
 import asyncio
 import json
 import shutil
@@ -31,6 +32,13 @@ EXPECTED_PUBLIC_MCP_TOOLS = (
     "hold",
     "grow",
     "source_read",
+    "source_attach",
+    "source_detach",
+    "source_restore",
+    "relation_read",
+    "relation_attach",
+    "relation_detach",
+    "relation_restore",
     "trace",
     "dream",
     "anchor",
@@ -286,6 +294,54 @@ async def test_kelivo_compatible_stateless_json_handshake_lists_all_tools():
                     EXPECTED_PUBLIC_MCP_TOOLS
                 )
                 assert all(isinstance(tool.get("inputSchema"), dict) for tool in tools)
+
+
+@pytest.mark.asyncio
+async def test_relation_tools_are_self_describing_in_public_mcp_schema():
+    import server
+
+    tools = {tool.name: tool for tool in await server.mcp.list_tools()}
+    relation_types = [
+        "caused_by",
+        "causes",
+        "continuation_of",
+        "continues",
+        "related_to",
+        "same_event",
+        "custom",
+    ]
+
+    attach = tools["relation_attach"]
+    attach_schema = attach.inputSchema
+    assert attach_schema["properties"]["relation_type"]["enum"] == relation_types
+    assert set(attach_schema["required"]) == {
+        "bucket_id",
+        "target_bucket_id",
+        "relation_type",
+    }
+    assert "bucket_id -> target_bucket_id" in attach.description
+    assert all(relation_type in attach.description for relation_type in relation_types)
+    assert "reverse_label" in attach.description
+    assert "可选 guard" in attach.description
+
+    read = tools["relation_read"]
+    assert set(read.inputSchema["required"]) == {"bucket_id"}
+    assert "include_detached=True" in read.description
+    assert "include_titles=True" in read.description
+    assert "不读取目标正文" in read.description
+    assert "relation_slot" in read.description
+
+    detach = tools["relation_detach"]
+    assert set(detach.inputSchema["required"]) == {"bucket_id", "relation_slot"}
+    assert "不删除关系历史" in detach.description
+    assert "relation_id" in detach.description
+    assert "单向关系只修改本端" in detach.description
+
+    restore = tools["relation_restore"]
+    assert set(restore.inputSchema["required"]) == {"bucket_id", "relation_slot"}
+    assert "relation_id" in restore.description
+    assert "单向关系只恢复本端" in restore.description
+    assert "archived" in restore.description
 
 
 def test_legacy_sse_transport_is_rejected():
@@ -1134,6 +1190,43 @@ def test_build_http_app_rejects_stdio_transport():
             token_validator=lambda *_args, **_kwargs: False,
             lifecycle=RuntimeLifecycle(logger=RecordingLogger()),
         )
+
+
+def test_stdio_runtime_lifecycle_owns_embedding_outbox():
+    source_path = Path(__file__).resolve().parents[1] / "src" / "server.py"
+    module = ast.parse(source_path.read_text(encoding="utf-8"))
+
+    stdio_branch = None
+    for node in ast.walk(module):
+        if not isinstance(node, ast.If) or not isinstance(node.test, ast.Compare):
+            continue
+        test = node.test
+        if (
+            isinstance(test.left, ast.Name)
+            and test.left.id == "transport"
+            and any(
+                isinstance(value, ast.Constant) and value.value == "stdio"
+                for value in test.comparators
+            )
+        ):
+            stdio_branch = node.body
+            break
+
+    assert stdio_branch is not None
+    lifecycle_calls = [
+        item
+        for statement in stdio_branch
+        for item in ast.walk(statement)
+        if isinstance(item, ast.Call)
+        and isinstance(item.func, ast.Name)
+        and item.func.id == "RuntimeLifecycle"
+    ]
+    assert len(lifecycle_calls) == 1
+
+    keywords = {keyword.arg: keyword.value for keyword in lifecycle_calls[0].keywords}
+    outbox = keywords.get("embedding_outbox")
+    assert isinstance(outbox, ast.Name)
+    assert outbox.id == "embedding_outbox"
 
 
 @pytest.mark.asyncio
