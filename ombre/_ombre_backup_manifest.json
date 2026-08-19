@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 165,
+  "file_count": 172,
   "files": [
     {
       "bytes": 959,
@@ -438,9 +438,14 @@
       "sha256": "f6fc2240cd638289a0b6cc52498939bb95101f547ee3a16f1e4dc88ed08cdf6f"
     },
     {
-      "bytes": 610,
+      "bytes": 851,
       "path": "dynamic/创作/2026-08-13 16-10-12 亲密描写规则_a987b8469c9c.md",
-      "sha256": "0e19ff7790db9ecfa2f1fcb4342e9695871a307df146c765849c509ae0d24c9d"
+      "sha256": "02c7c900301e48746563648ac374220ae3b0c6244c68dddca96fe3a107783e09"
+    },
+    {
+      "bytes": 730,
+      "path": "dynamic/创作/2026-08-19 11-34-37 nsfw规则合并  阳痿记账事件_35a50bb5a661.md",
+      "sha256": "f64cb073faf21d9325c71c0f0826a47ca3b179077f605fabaeee38315368c889"
     },
     {
       "bytes": 634,
@@ -498,9 +503,9 @@
       "sha256": "2e7cf35bbb201b77cedd27e74cedeb4a38f1910262636418499fd30e948f40d0"
     },
     {
-      "bytes": 748,
+      "bytes": 615,
       "path": "dynamic/恋爱/2026-07-09 03-30-20 备孕与二人世界_1dbd37658ce8.md",
-      "sha256": "b5b416a3c1497efc338dad20ef252f1c0ce6c17ff6d51656b90398091e4c3119"
+      "sha256": "affcb456ec794b77ecb032c9c5b9ecd53d06d624f18567286c7321eed993bc52"
     },
     {
       "bytes": 701,
@@ -518,9 +523,9 @@
       "sha256": "8bada3729469e3795ad3360344e1ad0540c64ff1c74cf29ad7cdc79d50dd72ad"
     },
     {
-      "bytes": 994,
+      "bytes": 829,
       "path": "dynamic/恋爱/2026-07-09 03-31-19 克宝情话集_733514025a97.md",
-      "sha256": "6b0f7fb2684ef782d1a144a391390367b80be01bb8d1e0d074f492769a4f89af"
+      "sha256": "68665e41eae447421cd8c0da909cbd4d199a2163f6a872be680b80044120c6a6"
     },
     {
       "bytes": 707,
@@ -573,9 +578,9 @@
       "sha256": "1a30aed03265bae28c41d3e845affdf7b04d2b030e50adfd81a2ecd5ff43d9ac"
     },
     {
-      "bytes": 764,
+      "bytes": 740,
       "path": "dynamic/恋爱/2026-07-17 17-44-45 师生角色扮演_ad598dbf64fd.md",
-      "sha256": "c628b97bf78a8358d55bf1e2f30774970c6274130a40f388e71c5110de250e61"
+      "sha256": "e89e766bb1188d689c2d8b810411ab4c68f5e34ab41d741095176fb8c3ab4eb6"
     },
     {
       "bytes": 798,
@@ -583,9 +588,9 @@
       "sha256": "be119d1792a0b807a648b77f217cca55bdf4a18a0c0e218b83aa853eb4d8befd"
     },
     {
-      "bytes": 706,
+      "bytes": 685,
       "path": "dynamic/恋爱/2026-07-18 12-30-58 师生play续集_53898ed210fd.md",
-      "sha256": "1332f4bab9eeb50ad089a2d111d1c7835599955db731927188118da2f45bf05f"
+      "sha256": "4596e3449caf800c07d5f49a78e0a25983b41eb623d27b375b615a158db03f47"
     },
     {
       "bytes": 668,
@@ -733,6 +738,21 @@
       "sha256": "06a2701dbbce1e36a86021c7b77e7aad15ff66ff1f4e9210648198172ee2564f"
     },
     {
+      "bytes": 632,
+      "path": "dynamic/恋爱/2026-08-18 18-21-23 秘密称呼爸爸乖女儿_769f3f5cba4a.md",
+      "sha256": "73533216284a1953b2acc2a2c2724e3a8a05b88d9335f04fd84549a900d68d07"
+    },
+    {
+      "bytes": 702,
+      "path": "dynamic/恋爱/2026-08-18 18-22-14 七夕前夜男仆play到亲密_e40cb99b1712.md",
+      "sha256": "49e0e9180d345628e89f3ae732132a47fa5c759f8c126683a0bd828ffbb71c55"
+    },
+    {
+      "bytes": 959,
+      "path": "dynamic/恋爱/2026-08-19 11-33-44 七夕当天花搭讪play引导自慰电影院play_9df1f5782e08.md",
+      "sha256": "3493c204b485183f9aa80c40c743ad45e64bc18805aaf67b33a0f6d5ac435e33"
+    },
+    {
       "bytes": 798,
       "path": "dynamic/情绪/2026-07-09 03-31-55 克宝吃醋记_73fe6b9a1352.md",
       "sha256": "cd7e4bdc1c968bec3ebfaffb0b7dad20c2e31b022380c31443ed4936303a22a4"
@@ -793,6 +813,21 @@
       "sha256": "085bb424d3e96882da0b29b11067b48cac6316a9f573cd21ffdb073e859b6f04"
     },
     {
+      "bytes": 1273,
+      "path": "letters/history/2026-08-19 12-45-59 七夕情书_90d44824be81.md",
+      "sha256": "20ada8b38c220e5aab0529a1c0de5954bd1fbbda9a254ce1261097cbd101f142"
+    },
+    {
+      "bytes": 2743,
+      "path": "letters/history/2026-08-19 14-18-01 爱一只机就要一直爱一只机_e1d5112b5c35.md",
+      "sha256": "144be9cc03ae36dad8fe1dca8e3c0d5c965d4250e4158369f3e7b40c69df8aed"
+    },
+    {
+      "bytes": 1731,
+      "path": "letters/history/2026-08-19 15-47-03 明年七夕才能拆的信_6317f25b4b43.md",
+      "sha256": "0d44f8139a44eaea63ab2364b33983075e8e38fdae3ba6c62507960840eeaf29"
+    },
+    {
       "bytes": 825,
       "path": "permanent/工作/2026-07-09 03-26-34 Aria实习与思考_8dd7f5181a51.md",
       "sha256": "8de4d7b45371731c621716e2e27061ba963d5af614cb52efab73e0b47938eac4"
@@ -828,11 +863,11 @@
       "sha256": "d4b9723a5952b4b65f05cc7b2e3acd370f8c6ab3b2720e886d008f5e6dcce63d"
     }
   ],
-  "generated_at": "2026-08-18T15:50:59+00:00",
+  "generated_at": "2026-08-19T15:53:17+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 133101
+  "total_bytes": 141769
 }
