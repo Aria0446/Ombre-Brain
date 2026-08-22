@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 181,
+  "file_count": 182,
   "files": [
     {
       "bytes": 959,
@@ -138,6 +138,11 @@
       "sha256": "60670f9cbf686d1c3d524714119cf048fc9a62d50791ac3c179f86458b739f54"
     },
     {
+      "bytes": 699,
+      "path": "archive/AI/2026-07-09 03-26-58 克宝性格设定_7253f5c7ab49.md",
+      "sha256": "cc4b56c2978f4afb297c7e16b53eadb5aa149abf421663a047a4da46a6820849"
+    },
+    {
       "bytes": 716,
       "path": "archive/人际/2026-07-09 14-18-20 宝宝面试通过_100dc0160b28.md",
       "sha256": "2e2c97559c2a1ab427b63e8e8c1f6cbb3e7f28bc481cf1d1d3a6a4be2048660e"
@@ -211,6 +216,11 @@
       "bytes": 800,
       "path": "archive/恋爱/2026-07-09 03-28-40 克宝日常趣事_c224e4c899c5.md",
       "sha256": "7d73f2f079b0cebd594f5bf94d08f0e2c226368afcb350a56a6a81192c605125"
+    },
+    {
+      "bytes": 830,
+      "path": "archive/恋爱/2026-07-09 03-31-19 克宝情话集_733514025a97.md",
+      "sha256": "be8a6230bc953bd032a8bd6c24924ea35a4855979e3cb7abb922586685757ff7"
     },
     {
       "bytes": 735,
@@ -368,11 +378,6 @@
       "sha256": "cefdafa5a89121038e4276434ba19de77dc51ca56def464b70e38e8858179b61"
     },
     {
-      "bytes": 698,
-      "path": "dynamic/AI/2026-07-09 03-26-58 克宝性格设定_7253f5c7ab49.md",
-      "sha256": "c516fbf4e89563870834670703e3efb4416d8737afa42c1e448af0dae2c22fc7"
-    },
-    {
       "bytes": 753,
       "path": "dynamic/AI/2026-07-16 07-11-51 AI结婚照与纪念摆件_1a8c3b650bd0.md",
       "sha256": "2d4370f78dbfdac321ca6262858b46e55ba714e0872da18e4cfd494f8f914a46"
@@ -490,7 +495,7 @@
     {
       "bytes": 755,
       "path": "dynamic/恋爱/2026-07-09 03-29-35 词典游戏写词条_03878ab1933d.md",
-      "sha256": "4d9eb1d1f2bd38d38895f56954c27dc86a1b2cd3910945f22bd4f0518bbf48e0"
+      "sha256": "9b66ada82242619c56616cb82058b5bc1246d42355b5c825c6a46bee0cc80c71"
     },
     {
       "bytes": 735,
@@ -520,12 +525,7 @@
     {
       "bytes": 751,
       "path": "dynamic/恋爱/2026-07-09 03-30-55 狗游戏与婚礼誓词_3ab32685eb2b.md",
-      "sha256": "8bada3729469e3795ad3360344e1ad0540c64ff1c74cf29ad7cdc79d50dd72ad"
-    },
-    {
-      "bytes": 829,
-      "path": "dynamic/恋爱/2026-07-09 03-31-19 克宝情话集_733514025a97.md",
-      "sha256": "68665e41eae447421cd8c0da909cbd4d199a2163f6a872be680b80044120c6a6"
+      "sha256": "b271ad04a3b446658ffd9b23ff9205edbeff64fe85c75e831c65e6a941578356"
     },
     {
       "bytes": 707,
@@ -778,9 +778,9 @@
       "sha256": "ae3c66be0836c98b1a31925c86e585595d05a49e73aa87b611167ee4a2a56edb"
     },
     {
-      "bytes": 2318,
+      "bytes": 2421,
       "path": "dynamic/游戏/2026-07-09 03-32-16 小游戏完整列表_598eebb81729.md",
-      "sha256": "25043d6deefe9de27892930c817df20d25281d88fe239eb049b3e382ec7dc404"
+      "sha256": "032df5e15de4d0dfd9e6eef55310cbbb19480da2972a79fd9e6af8236671fc71"
     },
     {
       "bytes": 775,
@@ -788,9 +788,14 @@
       "sha256": "5d28d4cc67db6dbc2c24f180bb6b9ac16a34573a9a89d03b392c339cb8d17e27"
     },
     {
-      "bytes": 455,
+      "bytes": 489,
       "path": "dynamic/游戏/2026-08-20 16-23-32 小游戏完整列表_6bc3531e968a.md",
-      "sha256": "c76351a1b741c1ef4a5c2ee50a5033b1dd198a0fcd4a6369b5988845ea42980a"
+      "sha256": "e7f59f54b9ea6debf41eafe67e1dbb9edffbe9118979b1ed2faa246e8ab0bb0a"
+    },
+    {
+      "bytes": 654,
+      "path": "dynamic/游戏/2026-08-22 01-31-41 小游戏完整列表_fa30a7c17f6a.md",
+      "sha256": "889578688554c14f0b5a23aee147511524398dc47d0e850d4903812a1efc62ad"
     },
     {
       "bytes": 1216,
@@ -908,11 +913,11 @@
       "sha256": "d4b9723a5952b4b65f05cc7b2e3acd370f8c6ab3b2720e886d008f5e6dcce63d"
     }
   ],
-  "generated_at": "2026-08-21T15:58:31+00:00",
+  "generated_at": "2026-08-22T16:01:41+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 151225
+  "total_bytes": 152018
 }
