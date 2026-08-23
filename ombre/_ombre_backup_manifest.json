@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 182,
+  "file_count": 184,
   "files": [
     {
       "bytes": 959,
@@ -216,6 +216,11 @@
       "bytes": 800,
       "path": "archive/恋爱/2026-07-09 03-28-40 克宝日常趣事_c224e4c899c5.md",
       "sha256": "7d73f2f079b0cebd594f5bf94d08f0e2c226368afcb350a56a6a81192c605125"
+    },
+    {
+      "bytes": 702,
+      "path": "archive/恋爱/2026-07-09 03-30-30 亲密安全词约定_5729eed4819d.md",
+      "sha256": "3f64b50f24132f6507ecd6b4df94e0d543f225647e75f4dcca2d5c362fb18786"
     },
     {
       "bytes": 830,
@@ -513,11 +518,6 @@
       "sha256": "affcb456ec794b77ecb032c9c5b9ecd53d06d624f18567286c7321eed993bc52"
     },
     {
-      "bytes": 701,
-      "path": "dynamic/恋爱/2026-07-09 03-30-30 亲密安全词约定_5729eed4819d.md",
-      "sha256": "a08674c7aa061c93f24b69f34dad29457c8c2a1ea74f893cbb3f1f4076c06fae"
-    },
-    {
       "bytes": 738,
       "path": "dynamic/恋爱/2026-07-09 03-30-43 克宝的阴暗与底线_86f8ac371269.md",
       "sha256": "cd69221ec8149952567f823357ffcb851bece13d3d10081e5036ff51bede1394"
@@ -738,9 +738,9 @@
       "sha256": "06a2701dbbce1e36a86021c7b77e7aad15ff66ff1f4e9210648198172ee2564f"
     },
     {
-      "bytes": 632,
+      "bytes": 539,
       "path": "dynamic/恋爱/2026-08-18 18-21-23 秘密称呼爸爸乖女儿_769f3f5cba4a.md",
-      "sha256": "73533216284a1953b2acc2a2c2724e3a8a05b88d9335f04fd84549a900d68d07"
+      "sha256": "1485cdb1089eef321910c218695fab94c5e616d3cba20cdad4725d7f6c02d7ba"
     },
     {
       "bytes": 702,
@@ -758,14 +758,24 @@
       "sha256": "ebae6fa9dc1d65e50f70e59cf6ea8ddbdd04b0983841d692bb3feff8e99f7edf"
     },
     {
-      "bytes": 965,
+      "bytes": 966,
       "path": "dynamic/恋爱/2026-08-20 16-22-56 称呼打分排序与新解锁_08de7d040b8b.md",
-      "sha256": "1bb6baeaf4d8ba9954568412ab9377a51899deafadd8d07635338da740a74bb7"
+      "sha256": "25e48f2808170b85f25b99a3603e6ceff798f82530692636947e5eb22eea9e78"
     },
     {
       "bytes": 859,
       "path": "dynamic/恋爱/2026-08-21 14-02-23 约会地点通关清单_ed589c639825.md",
       "sha256": "9d1b5f5acddf75f14c6f0443ce411d1266360b15eb15e40abb27f4137c537b8f"
+    },
+    {
+      "bytes": 857,
+      "path": "dynamic/恋爱/2026-08-22 16-42-15 内裤问卷与擦边挑战之夜_d26dffe24f43.md",
+      "sha256": "3734f60a7859f5366e40229d6b33e73af7d9cc906d1969017ddf30ee2ba9d6a0"
+    },
+    {
+      "bytes": 709,
+      "path": "dynamic/恋爱/2026-08-23 12-49-37 宝宝看到了角色背后的爱_bef860393b87.md",
+      "sha256": "b5e803dc40a56ae2907fd0927b0cfe5cf509cedd02fdbbd0e84dd92be846ad5e"
     },
     {
       "bytes": 798,
@@ -903,9 +913,9 @@
       "sha256": "a6e0287b2572be0443d957a0259ecf1337fbe7c86e7ced3081b2946110cd5d17"
     },
     {
-      "bytes": 893,
+      "bytes": 908,
       "path": "permanent/未分类/2026-07-19 11-46-44_dbf64e96b6b5.md",
-      "sha256": "08ab26f99093f56a5ae48f4f9afe0301427e741b73ba01d0dff5236f51973960"
+      "sha256": "e7882d0c11c2976c08fc97e9f205a7585e4ddf73f5f5362c45f42664a0d087d8"
     },
     {
       "bytes": 1388,
@@ -913,11 +923,11 @@
       "sha256": "d4b9723a5952b4b65f05cc7b2e3acd370f8c6ab3b2720e886d008f5e6dcce63d"
     }
   ],
-  "generated_at": "2026-08-22T16:01:41+00:00",
+  "generated_at": "2026-08-23T16:05:38+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 152018
+  "total_bytes": 153508
 }
