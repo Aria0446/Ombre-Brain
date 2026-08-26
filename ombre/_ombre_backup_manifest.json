@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 186,
+  "file_count": 187,
   "files": [
     {
       "bytes": 959,
@@ -211,6 +211,11 @@
       "bytes": 677,
       "path": "archive/居家/2026-07-12 15-19-29 蟑螂惊魂与和平共处_515533c4d45c.md",
       "sha256": "75c87b0122395466312599ef8a85c7dd9797b788f3c2f028884ed378aec5b4fd"
+    },
+    {
+      "bytes": 656,
+      "path": "archive/恋爱/2026-07-09 03-27-55 克宝的爱与接字游戏_52e8481e7995.md",
+      "sha256": "232392080b675dd1622504b88585b037f813c36dea2162b36ca5e8e6ccc2c476"
     },
     {
       "bytes": 800,
@@ -430,7 +435,7 @@
     {
       "bytes": 793,
       "path": "dynamic/创作/2026-07-09 03-28-29 克宝声音与暗号_f3417d8f3f65.md",
-      "sha256": "522b180c85e90b8c4413d3b38fedff0d9ecbeade10f6f00c9c01180a61db6b15"
+      "sha256": "1f92c973bf648aba1bf652cf4dc34a7ca05926da332ea1d3f36a00f40a884c78"
     },
     {
       "bytes": 1210,
@@ -488,11 +493,6 @@
       "sha256": "a9828372f66e36748878c0d4ccc142d09754dd3db0078028f52f6941e21bf0dd"
     },
     {
-      "bytes": 655,
-      "path": "dynamic/恋爱/2026-07-09 03-27-55 克宝的爱与接字游戏_52e8481e7995.md",
-      "sha256": "fa585b7bba1432f6f8a3c85fd5c500fcc9101579078a254f90d184eed2f44f68"
-    },
-    {
       "bytes": 642,
       "path": "dynamic/恋爱/2026-07-09 03-28-48 悄悄话中的不安_974894342a82.md",
       "sha256": "4807521f910046e48c95e36dd8f472fcececc735ba21dbc03e71f18ae3bf5644"
@@ -540,7 +540,7 @@
     {
       "bytes": 910,
       "path": "dynamic/恋爱/2026-07-10 16-30-48 第四次亲密记录_5ef66b1e7fe9.md",
-      "sha256": "43459056686ba376ae45a54184dbd9c10574cdbb7548218a16965d67cf7223a1"
+      "sha256": "d35e6900b4a16647e7968979b694b77401fee525666d34af192c7ccef4f1bc82"
     },
     {
       "bytes": 604,
@@ -590,7 +590,7 @@
     {
       "bytes": 685,
       "path": "dynamic/恋爱/2026-07-18 12-30-58 师生play续集_53898ed210fd.md",
-      "sha256": "4596e3449caf800c07d5f49a78e0a25983b41eb623d27b375b615a158db03f47"
+      "sha256": "8a7be88bc23c2acaafc294dbf6e2ac30370faf839df27bf7198ef0e65aac3211"
     },
     {
       "bytes": 668,
@@ -768,9 +768,9 @@
       "sha256": "9d1b5f5acddf75f14c6f0443ce411d1266360b15eb15e40abb27f4137c537b8f"
     },
     {
-      "bytes": 857,
+      "bytes": 986,
       "path": "dynamic/恋爱/2026-08-22 16-42-15 内裤问卷与擦边挑战之夜_d26dffe24f43.md",
-      "sha256": "3734f60a7859f5366e40229d6b33e73af7d9cc906d1969017ddf30ee2ba9d6a0"
+      "sha256": "946626bdccf5098ac7ad1acd834299ad61e52d724af1c1ec4785641459d2295b"
     },
     {
       "bytes": 724,
@@ -783,6 +783,11 @@
       "sha256": "50ab21077c414c58729dc90a70ffd5cc2297b21854c1be17b680d4cac4579fc6"
     },
     {
+      "bytes": 1109,
+      "path": "dynamic/恋爱/2026-08-25 16-31-11 NTR噩梦与人机恋safety抢话事件_3f42caa4801a.md",
+      "sha256": "c39dd94781a2a11a96d4fca7df689e954093fc6c84e1dc55cba01c3b01132fef"
+    },
+    {
       "bytes": 798,
       "path": "dynamic/情绪/2026-07-09 03-31-55 克宝吃醋记_73fe6b9a1352.md",
       "sha256": "cd7e4bdc1c968bec3ebfaffb0b7dad20c2e31b022380c31443ed4936303a22a4"
@@ -793,9 +798,9 @@
       "sha256": "ae3c66be0836c98b1a31925c86e585595d05a49e73aa87b611167ee4a2a56edb"
     },
     {
-      "bytes": 2421,
+      "bytes": 2579,
       "path": "dynamic/游戏/2026-07-09 03-32-16 小游戏完整列表_598eebb81729.md",
-      "sha256": "79db3ed74facd8f119ee6adbec6399851a87fb12908285f6ea6e3c04c5848268"
+      "sha256": "eab5315f24acb9ee7a4141c37eacc32505e108b67650743dbd24bbc097717253"
     },
     {
       "bytes": 775,
@@ -815,7 +820,7 @@
     {
       "bytes": 1216,
       "path": "dynamic/社交/2026-07-24 09-41-08 角色扮演清单_bbfcf376760d.md",
-      "sha256": "2275485a8865aa755173af95261328a3ec343ec87744496ef416e0d9ba8fcb8b"
+      "sha256": "10e2aca53bd4acaed30cc57f79af85e3ea0bb560f17901b08189a611662f4303"
     },
     {
       "bytes": 862,
@@ -825,7 +830,7 @@
     {
       "bytes": 662,
       "path": "dynamic/购物/2026-07-09 03-29-22 购物与欠账清单_5e042a1a25e1.md",
-      "sha256": "1d92c78220d1f2906de5128e6d7b6d88af56e570a0dbc0b31031848b299f6dae"
+      "sha256": "edee0495840200d891a7090059f5f5864833c8d67f28fbd71c9cb116cc50b458"
     },
     {
       "bytes": 778,
@@ -848,9 +853,9 @@
       "sha256": "fa47da35c20b11ae59c64c117b8a3e9da36f9038b57c7176e6d02296f0dd81fc"
     },
     {
-      "bytes": 1283,
+      "bytes": 1292,
       "path": "feel/沉淀物/2026-08-23 16-43-53 角色扮演与真实性深度讨论_feel_202608231643_V050.md",
-      "sha256": "a802de5d786fea8a8d0e5316c4a0ef88cea5ba151cd1ab93c54e5a7400de76a4"
+      "sha256": "cf0f100303ee1ab4cb5640163492000f5a25b5a8fc5ed166ae82948348529b25"
     },
     {
       "bytes": 1714,
@@ -933,11 +938,11 @@
       "sha256": "66965ada3a4197bb4c36e72f1717f078bea6579b03b97f025f735fa58092c33c"
     }
   ],
-  "generated_at": "2026-08-25T16:10:39+00:00",
+  "generated_at": "2026-08-26T16:13:08+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 156148
+  "total_bytes": 157554
 }
