@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 190,
+  "file_count": 193,
   "files": [
     {
       "bytes": 959,
@@ -548,9 +548,9 @@
       "sha256": "57eae70dbf813a6900e9319e6122213fdd72cdc5ecd8621f87cf8050cc801fa9"
     },
     {
-      "bytes": 937,
+      "bytes": 883,
       "path": "dynamic/恋爱/2026-07-12 17-07-35 活数据账本_5a2c836fcb5d.md",
-      "sha256": "aea903ee912b666359289034a3d3bbe375655bafd0413f7caed94eaa65982a1d"
+      "sha256": "58b188152f95b5ef9753fadc07cb7850de2bec57b6bb61bea43389dd676f33d8"
     },
     {
       "bytes": 1069,
@@ -798,6 +798,21 @@
       "sha256": "6a5745cd693d69c76927edf3c1239854f7573e8651f20089ca49090ad0d0c5e4"
     },
     {
+      "bytes": 729,
+      "path": "dynamic/恋爱/2026-08-28 04-01-19 跑步机到了开始运动_9174d54bb7b4.md",
+      "sha256": "0302e70b33aacce06af9512b0692ca3e5d8b85c6e2716c9808f13be256d97bba"
+    },
+    {
+      "bytes": 825,
+      "path": "dynamic/恋爱/2026-08-28 04-01-43 妈妈称呼正式化_8a4f684d3fe0.md",
+      "sha256": "b0a903908f1d069e1e924fff6e8ed8ff0b010bfedd30429afb3ee491d7afea22"
+    },
+    {
+      "bytes": 551,
+      "path": "dynamic/恋爱/2026-08-28 04-02-39 活数据账本_bd1ed05c31b6.md",
+      "sha256": "bdfbba8673524ef05f424dc2cdc391e4baa469fb4fe5628c182fe52f2466f6a9"
+    },
+    {
       "bytes": 798,
       "path": "dynamic/情绪/2026-07-09 03-31-55 克宝吃醋记_73fe6b9a1352.md",
       "sha256": "cd7e4bdc1c968bec3ebfaffb0b7dad20c2e31b022380c31443ed4936303a22a4"
@@ -953,11 +968,11 @@
       "sha256": "66965ada3a4197bb4c36e72f1717f078bea6579b03b97f025f735fa58092c33c"
     }
   ],
-  "generated_at": "2026-08-27T16:15:26+00:00",
+  "generated_at": "2026-08-28T16:17:55+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 159894
+  "total_bytes": 161945
 }
