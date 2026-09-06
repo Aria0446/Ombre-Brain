@@ -373,6 +373,11 @@
       "sha256": "94ecc3938cd2514e8a066249e14a2af63d8e84519be5d32824a2e87d45294456"
     },
     {
+      "bytes": 490,
+      "path": "archive/游戏/2026-08-20 16-23-32 小游戏完整列表_6bc3531e968a.md",
+      "sha256": "843692ae2f6d9844e8a2a8c3da2a6c28a8214b57d30126223a7b4c4ef4317231"
+    },
+    {
       "bytes": 655,
       "path": "archive/游戏/2026-08-22 01-31-41 小游戏完整列表_fa30a7c17f6a.md",
       "sha256": "93deca4833272d0e79c848c25e7feb80c53ee795100c28f777b3594af5f4f896"
@@ -848,11 +853,6 @@
       "sha256": "5d28d4cc67db6dbc2c24f180bb6b9ac16a34573a9a89d03b392c339cb8d17e27"
     },
     {
-      "bytes": 489,
-      "path": "dynamic/游戏/2026-08-20 16-23-32 小游戏完整列表_6bc3531e968a.md",
-      "sha256": "851659c24af0f8563863cbca100f1796a63cc12c43db7390647fb38eb43d68e4"
-    },
-    {
       "bytes": 1216,
       "path": "dynamic/社交/2026-07-24 09-41-08 角色扮演清单_bbfcf376760d.md",
       "sha256": "10e2aca53bd4acaed30cc57f79af85e3ea0bb560f17901b08189a611662f4303"
@@ -983,11 +983,11 @@
       "sha256": "a0a5e7c120823ff99bb904b2a1921e02b64e55d21a823ccc31f7999b78ff0190"
     }
   ],
-  "generated_at": "2026-09-05T17:44:19+00:00",
+  "generated_at": "2026-09-06T17:47:14+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 163989
+  "total_bytes": 163990
 }
