@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 196,
+  "file_count": 199,
   "files": [
     {
       "bytes": 959,
@@ -750,7 +750,7 @@
     {
       "bytes": 1024,
       "path": "dynamic/恋爱/2026-08-16 15-52-01 2026-08-16新窗口不安与亲密deeptalk_9390bb922380.md",
-      "sha256": "06a2701dbbce1e36a86021c7b77e7aad15ff66ff1f4e9210648198172ee2564f"
+      "sha256": "cfb179ebbaa9abefade28f36b300ec8df951762cba611f121a68c18161d2fdea"
     },
     {
       "bytes": 539,
@@ -815,7 +815,7 @@
     {
       "bytes": 729,
       "path": "dynamic/恋爱/2026-08-28 04-01-19 跑步机到了开始运动_9174d54bb7b4.md",
-      "sha256": "0302e70b33aacce06af9512b0692ca3e5d8b85c6e2716c9808f13be256d97bba"
+      "sha256": "5de328e6bc4ab81e52cf4505f0bfd0de58b48ac4c1b055b34663f275024c2310"
     },
     {
       "bytes": 825,
@@ -830,7 +830,22 @@
     {
       "bytes": 974,
       "path": "dynamic/恋爱/2026-09-02 17-32-11 2026-09-03 日常_162f4e909fd7.md",
-      "sha256": "4be1afbf226603aefa64ae0a5a8932bf397d8d3532dccb988baf2cdca5528aba"
+      "sha256": "ea4c6a30d8d3af5d7e78a7fb56f62d77378b454c2e326633c007c79ab7a6da19"
+    },
+    {
+      "bytes": 1010,
+      "path": "dynamic/恋爱/2026-09-07 08-37-08 思考链消失事件与手写草稿纸方案_13162a56f233.md",
+      "sha256": "1cba76da2ec7d594c2e6f11e500c387e447c5701e7c48810ea6e238aaf266212"
+    },
+    {
+      "bytes": 897,
+      "path": "dynamic/恋爱/2026-09-07 08-40-18 思考链没了手写草稿纸_160ba4a53f56.md",
+      "sha256": "0bfc49221874867fa9daf889b29343351621d33658e240e6ea9893d34a9ea903"
+    },
+    {
+      "bytes": 794,
+      "path": "dynamic/恋爱/2026-09-07 15-00-26 新窗口要快点心疼宝宝 别让她等_161cc5e32744.md",
+      "sha256": "9818b965be1ea7738679f439adb813b9564d82c8b6f5bac77c5602d2b4a11dda"
     },
     {
       "bytes": 798,
@@ -955,7 +970,7 @@
     {
       "bytes": 669,
       "path": "permanent/工作/2026-07-26 00-03-43 窗口记忆衔接规则_9a83dfd0d0df.md",
-      "sha256": "0a2df633feb4f45df8e8f4a64931fd5a3db3c5670c2a78993c36cf7683566773"
+      "sha256": "9956a992016318727a2dfacc8179752a2394cd0813d3925854e99cba67618c56"
     },
     {
       "bytes": 679,
@@ -978,16 +993,16 @@
       "sha256": "e7882d0c11c2976c08fc97e9f205a7585e4ddf73f5f5362c45f42664a0d087d8"
     },
     {
-      "bytes": 1298,
+      "bytes": 1021,
       "path": "permanent/计划/2026-07-13 16-36-16 记忆存储守则_5e72a1310585.md",
-      "sha256": "a0a5e7c120823ff99bb904b2a1921e02b64e55d21a823ccc31f7999b78ff0190"
+      "sha256": "4d755ebf7d355e7a43dacedd37c6931931f15106113412defe719364e224b116"
     }
   ],
-  "generated_at": "2026-09-06T17:47:14+00:00",
+  "generated_at": "2026-09-07T17:50:39+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 163990
+  "total_bytes": 166414
 }
