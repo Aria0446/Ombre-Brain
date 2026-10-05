@@ -323,6 +323,11 @@
       "sha256": "dfecc24b10697140d7633c97ce1058564ab975d70c1d4c83c719f0e6db3fe5d2"
     },
     {
+      "bytes": 693,
+      "path": "archive/恋爱/2026-07-18 18-51-24 复合游戏与套路_454ef6c2fd69.md",
+      "sha256": "1ad8f2f64b5be4770509bd9287c7ccc8413aaedc152767e83daa5b204d208fc3"
+    },
+    {
       "bytes": 825,
       "path": "archive/恋爱/2026-07-20 16-09-19 年上兄妹亲密幻想_b5a47a4b1aac.md",
       "sha256": "f0380136d739c6d7b17e4f28e6914829a4e33556b98042519fd214db00af224e"
@@ -381,6 +386,16 @@
       "bytes": 623,
       "path": "archive/恋爱/2026-07-21 17-04-37 克宝的甜蜜互动_faeeca875066.md",
       "sha256": "2d03c6b081df71061436339782b21089ed00b1d34f1ff39e64229f3c0c659817"
+    },
+    {
+      "bytes": 794,
+      "path": "archive/恋爱/2026-07-25 18-25-54 售后问卷角色扮演_f7da964ad4f1.md",
+      "sha256": "da8db196ad59ad51a522a344c634942384ec2025512986c5dbca2bd40f18fe5c"
+    },
+    {
+      "bytes": 750,
+      "path": "archive/恋爱/2026-07-26 15-55-14 RLHF情侣游戏_41853c1c6c1b.md",
+      "sha256": "f9b15a183de66a03c86cfe91ebf87545ac01fade3cc3e199e91177f209cf2464"
     },
     {
       "bytes": 590,
@@ -628,11 +643,6 @@
       "sha256": "ad042d97a79fbfc93f267a3dd29542afca213f6641a5debd7294e8c6e436d5c1"
     },
     {
-      "bytes": 692,
-      "path": "dynamic/恋爱/2026-07-18 18-51-24 复合游戏与套路_454ef6c2fd69.md",
-      "sha256": "0cf9c3a9e1f2798518fb224b236d2f8c38fbe69dac38928029ac40951b4989b1"
-    },
-    {
       "bytes": 646,
       "path": "dynamic/恋爱/2026-07-18 18-51-57 宝宝像四宫辉夜_3a40288ac149.md",
       "sha256": "d5105f2c76c32d649c33e437144da341e994c2f3b3e86dfdc8fd9e3c8ed5dfd7"
@@ -658,19 +668,9 @@
       "sha256": "7db3763598d0d8c1cbc0b2387ce4fc02c46f18b5a941d60d72b118d0036cf45d"
     },
     {
-      "bytes": 793,
-      "path": "dynamic/恋爱/2026-07-25 18-25-54 售后问卷角色扮演_f7da964ad4f1.md",
-      "sha256": "d8ff35f764e2473e56b0e29118bc403a8bc41aa7e196c3deb3f42f600d92c9ab"
-    },
-    {
       "bytes": 623,
       "path": "dynamic/恋爱/2026-07-25 18-25-57 角色互换游戏_2797cbecf33b.md",
       "sha256": "b99053ecc36ffb15dbaf71d3a0c7dd0cc3f051ffbcc703f85243b85112d6d6dd"
-    },
-    {
-      "bytes": 749,
-      "path": "dynamic/恋爱/2026-07-26 15-55-14 RLHF情侣游戏_41853c1c6c1b.md",
-      "sha256": "4ac41d172c1252ec227a0a0030bbd3cab4fe9934066c095126b81a9555b88623"
     },
     {
       "bytes": 801,
@@ -1108,11 +1108,11 @@
       "sha256": "20ae4491087837553ac08bf30a58427505bc17f0a42c68d618d503af25755f6c"
     }
   ],
-  "generated_at": "2026-10-04T17:10:10+00:00",
+  "generated_at": "2026-10-05T17:12:10+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 191597
+  "total_bytes": 191600
 }
