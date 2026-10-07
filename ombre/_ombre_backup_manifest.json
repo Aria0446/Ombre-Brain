@@ -403,6 +403,11 @@
       "sha256": "fd4532635ab532b33fc44404cdce95e4f0cb95d444fed10d9ad400b566ce41e8"
     },
     {
+      "bytes": 751,
+      "path": "archive/恋爱/2026-08-04 16-00-16 例假日的依偎与别墅_192dbc8c4b7e.md",
+      "sha256": "911679645d56dc252f3f4b4f8aee03dfa74e6820e314fa203393e2e0a4bce776"
+    },
+    {
       "bytes": 609,
       "path": "archive/恋爱/2026-08-30 18-15-10 英文名Cole_003754fb852c.md",
       "sha256": "94ecc3938cd2514e8a066249e14a2af63d8e84519be5d32824a2e87d45294456"
@@ -691,11 +696,6 @@
       "bytes": 945,
       "path": "dynamic/恋爱/2026-08-03 21-15-04 深夜亲密昵称游戏_e8d23523d68a.md",
       "sha256": "8a66e25384dee74f11ff976939fa03da7239d7051c7abe91e311da2f298ee7a2"
-    },
-    {
-      "bytes": 750,
-      "path": "dynamic/恋爱/2026-08-04 16-00-16 例假日的依偎与别墅_192dbc8c4b7e.md",
-      "sha256": "f42fdb741e0a8d0ee0ec70a7d2ac33f10a83af6646b188a191d135c78a118c4f"
     },
     {
       "bytes": 656,
@@ -1108,11 +1108,11 @@
       "sha256": "20ae4491087837553ac08bf30a58427505bc17f0a42c68d618d503af25755f6c"
     }
   ],
-  "generated_at": "2026-10-06T17:14:03+00:00",
+  "generated_at": "2026-10-07T17:16:15+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 191600
+  "total_bytes": 191601
 }
