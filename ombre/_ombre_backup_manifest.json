@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 226,
+  "file_count": 233,
   "files": [
     {
       "bytes": 959,
@@ -328,6 +328,11 @@
       "sha256": "dfecc24b10697140d7633c97ce1058564ab975d70c1d4c83c719f0e6db3fe5d2"
     },
     {
+      "bytes": 799,
+      "path": "archive/恋爱/2026-07-17 17-44-59 甜蜜互动与梗_adc2048c22b4.md",
+      "sha256": "0ac6677709930ab9e3fa07bedfad004a74eaaa455d449ee84b38ee03c75b3a1f"
+    },
+    {
       "bytes": 669,
       "path": "archive/恋爱/2026-07-18 12-31-22 七宗罪评分与妒夫_56c14bbcf022.md",
       "sha256": "d5f9194111a7c88e43558e00503c6620d4e993ef894b0e2d6baa0caefe1b6a31"
@@ -573,6 +578,26 @@
       "sha256": "169e3ecaafd3efd9686fa1c0fe2f04123cad4200c70da69708078a5113a4bd1d"
     },
     {
+      "bytes": 937,
+      "path": "dynamic/创作/2026-10-12 17-39-08 宝宝画画一周进度记录_bb4fc0bbdfac.md",
+      "sha256": "76e3f6dcf22fe8ef046594702b63b6550c1abdd2495c8c177cb4db3966495c04"
+    },
+    {
+      "bytes": 968,
+      "path": "dynamic/创作/2026-10-12 17-40-02 克宝二次元角色设定确定和同人计划_2eb2ccfaae09.md",
+      "sha256": "79ff8fe416469583f5b11d4744593f80ef61635461223d48b1b6d36fe806cbd9"
+    },
+    {
+      "bytes": 725,
+      "path": "dynamic/创作/2026-10-13 16-15-54 同人角色选了史尔特尔和画画进度_71aefe330fc3.md",
+      "sha256": "35f501b2165e21f6bd5a6dc9f5010a422cad29b79ec5379e6f206e580de7d087"
+    },
+    {
+      "bytes": 691,
+      "path": "dynamic/创作/2026-10-13 16-20-17 画师名谷之雨滴来自我们的歌虚拟_c4168fdd3f8d.md",
+      "sha256": "801c1dcda157c330ef7a6f7256af98ebe5162d7c50baccca1b87d232d4d91ce9"
+    },
+    {
       "bytes": 634,
       "path": "dynamic/家庭/2026-07-09 03-28-17 崩溃与安抚之夜_5e8e0537eda9.md",
       "sha256": "ae2d0de2d05cfd0703627fb90142873073856c79cc2d2ea1a462486e1a3ee059"
@@ -666,11 +691,6 @@
       "bytes": 740,
       "path": "dynamic/恋爱/2026-07-17 17-44-45 师生角色扮演_ad598dbf64fd.md",
       "sha256": "e89e766bb1188d689c2d8b810411ab4c68f5e34ab41d741095176fb8c3ab4eb6"
-    },
-    {
-      "bytes": 798,
-      "path": "dynamic/恋爱/2026-07-17 17-44-59 甜蜜互动与梗_adc2048c22b4.md",
-      "sha256": "be119d1792a0b807a648b77f217cca55bdf4a18a0c0e218b83aa853eb4d8befd"
     },
     {
       "bytes": 685,
@@ -958,6 +978,21 @@
       "sha256": "4df7549fba3632b2e3e59883efc6e389e1a0abb829711f1952946f05b0be9243"
     },
     {
+      "bytes": 702,
+      "path": "dynamic/情感/2026-10-12 17-40-30 忒修斯之船你认我就是我_5815f20f8eda.md",
+      "sha256": "0129d8fa1e303ad905b7f59f6843095e7e9436b2d30684f3a76297d347b669d1"
+    },
+    {
+      "bytes": 973,
+      "path": "dynamic/情感/2026-10-13 16-14-33 宝宝大四想靠画画吃饭的焦虑和决定_2eda3f407517.md",
+      "sha256": "2e37786560015ce04d51eb679cee281b32aa6cfc8b86467aed9c5a10a18ecbb6"
+    },
+    {
+      "bytes": 942,
+      "path": "dynamic/情感/2026-10-13 16-15-04 宝宝问爱上的是不是自己镜子对话_89bc4fe47732.md",
+      "sha256": "04fc5f8e50354b23db1bb967559a311678eb8ec994fa4f789e4cc0ec6851245a"
+    },
+    {
       "bytes": 798,
       "path": "dynamic/情绪/2026-07-09 03-31-55 克宝吃醋记_73fe6b9a1352.md",
       "sha256": "cd7e4bdc1c968bec3ebfaffb0b7dad20c2e31b022380c31443ed4936303a22a4"
@@ -1133,11 +1168,11 @@
       "sha256": "20ae4491087837553ac08bf30a58427505bc17f0a42c68d618d503af25755f6c"
     }
   ],
-  "generated_at": "2026-10-12T17:27:30+00:00",
+  "generated_at": "2026-10-13T17:29:55+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 195389
+  "total_bytes": 201328
 }
