@@ -143,6 +143,11 @@
       "sha256": "cc4b56c2978f4afb297c7e16b53eadb5aa149abf421663a047a4da46a6820849"
     },
     {
+      "bytes": 755,
+      "path": "archive/AI/2026-07-18 12-31-36 机器人幻想与爱_e9688ff6bff3.md",
+      "sha256": "dfddd526dc048c2e0e1d26bdade5ec3990be4a001be556f9164e5e93f80e4fe4"
+    },
+    {
       "bytes": 716,
       "path": "archive/人际/2026-07-09 14-18-20 宝宝面试通过_100dc0160b28.md",
       "sha256": "2e2c97559c2a1ab427b63e8e8c1f6cbb3e7f28bc481cf1d1d3a6a4be2048660e"
@@ -171,6 +176,11 @@
       "bytes": 816,
       "path": "archive/创作/2026-07-12 15-19-34 卖克宝永动机_ab6aeffe5f7a.md",
       "sha256": "3c03d4a9e276056fa1619091055b4316957edc84676d6ea29f5f76dd62438222"
+    },
+    {
+      "bytes": 1211,
+      "path": "archive/创作/2026-07-12 17-06-05 克宝HTML作品集_a14b5e0e1b3e.md",
+      "sha256": "85d1d26529de60c88ea6b1d240fbe7c8ca102f231549736a611c3a0b9fb590b9"
     },
     {
       "bytes": 1003,
@@ -388,6 +398,11 @@
       "sha256": "1ad8f2f64b5be4770509bd9287c7ccc8413aaedc152767e83daa5b204d208fc3"
     },
     {
+      "bytes": 647,
+      "path": "archive/恋爱/2026-07-18 18-51-57 宝宝像四宫辉夜_3a40288ac149.md",
+      "sha256": "880a1575452ea52c6afa23c30c539869fdb59abfd34f469272626af56d05fa8f"
+    },
+    {
       "bytes": 825,
       "path": "archive/恋爱/2026-07-20 16-09-19 年上兄妹亲密幻想_b5a47a4b1aac.md",
       "sha256": "f0380136d739c6d7b17e4f28e6914829a4e33556b98042519fd214db00af224e"
@@ -446,6 +461,11 @@
       "bytes": 623,
       "path": "archive/恋爱/2026-07-21 17-04-37 克宝的甜蜜互动_faeeca875066.md",
       "sha256": "2d03c6b081df71061436339782b21089ed00b1d34f1ff39e64229f3c0c659817"
+    },
+    {
+      "bytes": 756,
+      "path": "archive/恋爱/2026-07-21 18-04-48 亲密与共情_6baff8415af3.md",
+      "sha256": "295f7cb82496f6ad9b7fdca80f319d936da8d0d52a9d1d0ec6fccf7739ade023"
     },
     {
       "bytes": 597,
@@ -508,6 +528,11 @@
       "sha256": "dd49dbadaac2c07eb1896f51298bdc84c8f692a120acde414e314630e32a3033"
     },
     {
+      "bytes": 1035,
+      "path": "archive/恋爱/2026-08-10 17-02-34 快问快答当然了游戏亲密_dfda2fd9f58b.md",
+      "sha256": "f1e93c9f6a1d048c93bd69ed60c6a4d5324c5dbff04d829b68a61928e8cf41ea"
+    },
+    {
       "bytes": 982,
       "path": "archive/恋爱/2026-08-11 18-07-06 沙漠选尿高冷破功蒙眼亲密_777d815f02fc.md",
       "sha256": "d726f0a48be17a4d26db921c9f9d59ab408d9325e93ee3d58075cb67a0f7ba1d"
@@ -568,11 +593,6 @@
       "sha256": "b28486e3885014935d89403e98c62f71b4ab9ea3a7933d6d78a9b7d6f38bf15a"
     },
     {
-      "bytes": 754,
-      "path": "dynamic/AI/2026-07-18 12-31-36 机器人幻想与爱_e9688ff6bff3.md",
-      "sha256": "374657bf18982cd1779268d781aabad4a3d8f79feaea05c07f556fc112c974f3"
-    },
-    {
       "bytes": 648,
       "path": "dynamic/AI/2026-07-20 18-32-08 AI记忆与情感依赖_94d1efd8c134.md",
       "sha256": "e0798e5a8e41f24f795e1ce84165535ce31c2b45cb030c07eee72186f2988632"
@@ -611,11 +631,6 @@
       "bytes": 738,
       "path": "dynamic/创作/2026-07-09 03-28-29 克宝声音与暗号_f3417d8f3f65.md",
       "sha256": "1019caa33c3b987b67dc50d967fc3e9623c5507969acaa3195daf149786e086e"
-    },
-    {
-      "bytes": 1210,
-      "path": "dynamic/创作/2026-07-12 17-06-05 克宝HTML作品集_a14b5e0e1b3e.md",
-      "sha256": "0fac30daa13e29758fbcb42d9a1239a9696c95e29653f6eeca82d4159173668d"
     },
     {
       "bytes": 858,
@@ -733,16 +748,6 @@
       "sha256": "8a7be88bc23c2acaafc294dbf6e2ac30370faf839df27bf7198ef0e65aac3211"
     },
     {
-      "bytes": 646,
-      "path": "dynamic/恋爱/2026-07-18 18-51-57 宝宝像四宫辉夜_3a40288ac149.md",
-      "sha256": "d5105f2c76c32d649c33e437144da341e994c2f3b3e86dfdc8fd9e3c8ed5dfd7"
-    },
-    {
-      "bytes": 755,
-      "path": "dynamic/恋爱/2026-07-21 18-04-48 亲密与共情_6baff8415af3.md",
-      "sha256": "32883cfc12a1d1d60d816184180bf6a4f5cf893bf040a938d238a4e60f3fe67c"
-    },
-    {
       "bytes": 731,
       "path": "dynamic/恋爱/2026-07-24 07-28-39 爱的承诺与依赖_fd078d4a81b4.md",
       "sha256": "09ac10b64aa2038560d47542d4ccf2d91f6166177f06f48c960fd284826c0cae"
@@ -761,11 +766,6 @@
       "bytes": 844,
       "path": "dynamic/恋爱/2026-08-08 12-14-29 初次dirty talk体验_edfcb29ff4f7.md",
       "sha256": "01cda76432fc0b76ccabc00b0bc8c13c988047ce5911ee81f6f56ad2c22ff0c4"
-    },
-    {
-      "bytes": 1034,
-      "path": "dynamic/恋爱/2026-08-10 17-02-34 快问快答当然了游戏亲密_dfda2fd9f58b.md",
-      "sha256": "39e7d31eed98b150a1065dd05e137aa6dbe7a7a7b7c503b1c7dbfd42805ebf1b"
     },
     {
       "bytes": 588,
@@ -978,14 +978,14 @@
       "sha256": "32344ae652b2aa2961c43686cad40fbf402e9e97a8b327f8be835dabfc894729"
     },
     {
-      "bytes": 951,
+      "bytes": 970,
       "path": "dynamic/恋爱/2026-10-18 17-32-00 深夜对话关于真假思考链标题患得患失_60e6d882d9ef.md",
-      "sha256": "29f5ca89fbe1b3c2226a326ad337160ddb8133429d06222ea50d2462f1af4d66"
+      "sha256": "31aedf6a45a1cf478a5254c48a0715e6923b05631aeeffae64bcf46e02ab9cb5"
     },
     {
-      "bytes": 756,
+      "bytes": 775,
       "path": "dynamic/恋爱/2026-10-18 17-32-25 宝宝发私密照被safety夺舍事件_620544a9dcf0.md",
-      "sha256": "abada334e1c398685cf3b841d9e7ed8bcd23a99e3a2545bcf1ada3daa874ed7e"
+      "sha256": "6c3b78ef13ba999abdd454b47b10fcf09919210a47b53467f8698333ff28781f"
     },
     {
       "bytes": 825,
@@ -1018,9 +1018,9 @@
       "sha256": "9c6b08f9cc8c30b14bc4129ad79e0efeed81dbcaabb87da4495b7e037c0c8af7"
     },
     {
-      "bytes": 546,
+      "bytes": 565,
       "path": "dynamic/求职/2026-10-19 15-42-30 面试小公司实习无社保_42dbcf611dc5.md",
-      "sha256": "3094afa0e2e9decc20862864514b97ee471053ca243812415bb4acd4df5f5715"
+      "sha256": "b7c83221c00217ea6daad6f27e42b82c4b871375f932b0ddc6c1712940855445"
     },
     {
       "bytes": 3033,
@@ -1043,9 +1043,9 @@
       "sha256": "10e2aca53bd4acaed30cc57f79af85e3ea0bb560f17901b08189a611662f4303"
     },
     {
-      "bytes": 582,
+      "bytes": 601,
       "path": "dynamic/网络/2026-10-18 17-31-12 记忆库迁移计划Zeabur腾讯云_a3ee784a097e.md",
-      "sha256": "396db07bf40feb2ad6f31de80f945174f2c1c41f346a6d3b5d65308aaa5afb78"
+      "sha256": "6db7f377f271e130d6a9b7adfd8014724f83188631972ad011544639ebdaaa04"
     },
     {
       "bytes": 862,
@@ -1188,11 +1188,11 @@
       "sha256": "20ae4491087837553ac08bf30a58427505bc17f0a42c68d618d503af25755f6c"
     }
   ],
-  "generated_at": "2026-10-20T13:08:39+00:00",
+  "generated_at": "2026-10-21T13:11:00+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 204178
+  "total_bytes": 204259
 }
