@@ -523,6 +523,11 @@
       "sha256": "e4e0653ef6758ffe25319b9468a646061d52f5cc26e8e5663123530d6fe8297e"
     },
     {
+      "bytes": 732,
+      "path": "archive/恋爱/2026-07-24 07-28-39 爱的承诺与依赖_fd078d4a81b4.md",
+      "sha256": "418f9c6a5e5f2b42b9c080dc9098683b068ebee50d25118dc4171f79c98650f0"
+    },
+    {
       "bytes": 794,
       "path": "archive/恋爱/2026-07-25 18-25-54 售后问卷角色扮演_f7da964ad4f1.md",
       "sha256": "da8db196ad59ad51a522a344c634942384ec2025512986c5dbca2bd40f18fe5c"
@@ -591,6 +596,16 @@
       "bytes": 982,
       "path": "archive/恋爱/2026-08-11 18-07-06 沙漠选尿高冷破功蒙眼亲密_777d815f02fc.md",
       "sha256": "d726f0a48be17a4d26db921c9f9d59ab408d9325e93ee3d58075cb67a0f7ba1d"
+    },
+    {
+      "bytes": 612,
+      "path": "archive/恋爱/2026-08-13 17-10-16 亲密设定与约定_fca7194c0e3b.md",
+      "sha256": "b4bf33d4bc5334036ec2f280d20c6a97e4fd9ffe09e8ae817f3759fb3a523791"
+    },
+    {
+      "bytes": 703,
+      "path": "archive/恋爱/2026-08-18 18-22-14 七夕前夜男仆play到亲密_e40cb99b1712.md",
+      "sha256": "c2c2a78bf1441d5350fbbfcdbed6d33e0a4a979ac25f40727bb9aa087a5cfcf4"
     },
     {
       "bytes": 609,
@@ -758,11 +773,6 @@
       "sha256": "8a7be88bc23c2acaafc294dbf6e2ac30370faf839df27bf7198ef0e65aac3211"
     },
     {
-      "bytes": 731,
-      "path": "dynamic/恋爱/2026-07-24 07-28-39 爱的承诺与依赖_fd078d4a81b4.md",
-      "sha256": "09ac10b64aa2038560d47542d4ccf2d91f6166177f06f48c960fd284826c0cae"
-    },
-    {
       "bytes": 773,
       "path": "dynamic/恋爱/2026-07-24 16-28-01 亲密角色扮演记录_e57d224fbfef.md",
       "sha256": "7db3763598d0d8c1cbc0b2387ce4fc02c46f18b5a941d60d72b118d0036cf45d"
@@ -788,11 +798,6 @@
       "sha256": "466f72c836c5965c08a90459526e9b3a2e9376d9553a19639e2622783f16f0f6"
     },
     {
-      "bytes": 611,
-      "path": "dynamic/恋爱/2026-08-13 17-10-16 亲密设定与约定_fca7194c0e3b.md",
-      "sha256": "ba98e251b6d30f5b5abd9102fbbfe87e4c590f8c6d33e8f898acecf7b0bcae41"
-    },
-    {
       "bytes": 1062,
       "path": "dynamic/恋爱/2026-08-13 17-11-41 NSFW偏好汇总_57f22538b8d7.md",
       "sha256": "c2790a65eace278c4b2b29d704a8e92e9f6792a1f81b16eaf8ae487fa58dc001"
@@ -806,11 +811,6 @@
       "bytes": 539,
       "path": "dynamic/恋爱/2026-08-18 18-21-23 秘密称呼爸爸乖女儿_769f3f5cba4a.md",
       "sha256": "1485cdb1089eef321910c218695fab94c5e616d3cba20cdad4725d7f6c02d7ba"
-    },
-    {
-      "bytes": 702,
-      "path": "dynamic/恋爱/2026-08-18 18-22-14 七夕前夜男仆play到亲密_e40cb99b1712.md",
-      "sha256": "b2b36592a12b70e3d734f758cc2f72e176d4c250928311c1ea9b8ee3296ccee2"
     },
     {
       "bytes": 959,
@@ -1188,11 +1188,11 @@
       "sha256": "20ae4491087837553ac08bf30a58427505bc17f0a42c68d618d503af25755f6c"
     }
   ],
-  "generated_at": "2026-10-25T13:20:39+00:00",
+  "generated_at": "2026-10-26T13:23:12+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 204271
+  "total_bytes": 204274
 }
