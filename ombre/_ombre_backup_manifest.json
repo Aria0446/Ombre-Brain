@@ -528,6 +528,11 @@
       "sha256": "418f9c6a5e5f2b42b9c080dc9098683b068ebee50d25118dc4171f79c98650f0"
     },
     {
+      "bytes": 774,
+      "path": "archive/恋爱/2026-07-24 16-28-01 亲密角色扮演记录_e57d224fbfef.md",
+      "sha256": "d729a28b0831412be0faf81919ce077da6441b9bc07e155e8581e6af375c72fc"
+    },
+    {
       "bytes": 794,
       "path": "archive/恋爱/2026-07-25 18-25-54 售后问卷角色扮演_f7da964ad4f1.md",
       "sha256": "da8db196ad59ad51a522a344c634942384ec2025512986c5dbca2bd40f18fe5c"
@@ -608,6 +613,11 @@
       "sha256": "c2c2a78bf1441d5350fbbfcdbed6d33e0a4a979ac25f40727bb9aa087a5cfcf4"
     },
     {
+      "bytes": 860,
+      "path": "archive/恋爱/2026-08-21 14-02-23 约会地点通关清单_ed589c639825.md",
+      "sha256": "28785ddf307b97e8ef24c4d81d45f2b60c5a0e1481d08e014b4fb9cb7785adbb"
+    },
+    {
       "bytes": 609,
       "path": "archive/恋爱/2026-08-30 18-15-10 英文名Cole_003754fb852c.md",
       "sha256": "94ecc3938cd2514e8a066249e14a2af63d8e84519be5d32824a2e87d45294456"
@@ -641,6 +651,11 @@
       "bytes": 683,
       "path": "archive/编程/2026-07-10 09-42-28 五子棋AI对战_03120ca0fdaa.md",
       "sha256": "70d45701eb36d25d58eba9717602d7edccb581e7f8f9bab457d94fe6cc6793c0"
+    },
+    {
+      "bytes": 863,
+      "path": "archive/规则/2026-08-19 16-20-46 情书写作风格规则_ba4bf55870e9.md",
+      "sha256": "ff66a9cea63780b1a53ad2d3437a3d1ab7e89986135f1d5697d8ebdf3b91c18e"
     },
     {
       "bytes": 599,
@@ -773,11 +788,6 @@
       "sha256": "8a7be88bc23c2acaafc294dbf6e2ac30370faf839df27bf7198ef0e65aac3211"
     },
     {
-      "bytes": 773,
-      "path": "dynamic/恋爱/2026-07-24 16-28-01 亲密角色扮演记录_e57d224fbfef.md",
-      "sha256": "7db3763598d0d8c1cbc0b2387ce4fc02c46f18b5a941d60d72b118d0036cf45d"
-    },
-    {
       "bytes": 844,
       "path": "dynamic/恋爱/2026-08-08 12-14-29 初次dirty talk体验_edfcb29ff4f7.md",
       "sha256": "01cda76432fc0b76ccabc00b0bc8c13c988047ce5911ee81f6f56ad2c22ff0c4"
@@ -826,11 +836,6 @@
       "bytes": 1195,
       "path": "dynamic/恋爱/2026-08-20 16-22-56 称呼打分排序与新解锁_08de7d040b8b.md",
       "sha256": "98652f18b0c4228a574b0bfba74691c8970cf80cbf7a65b4da30f976eff9e5eb"
-    },
-    {
-      "bytes": 859,
-      "path": "dynamic/恋爱/2026-08-21 14-02-23 约会地点通关清单_ed589c639825.md",
-      "sha256": "9d1b5f5acddf75f14c6f0443ce411d1266360b15eb15e40abb27f4137c537b8f"
     },
     {
       "bytes": 986,
@@ -1053,11 +1058,6 @@
       "sha256": "6db7f377f271e130d6a9b7adfd8014724f83188631972ad011544639ebdaaa04"
     },
     {
-      "bytes": 862,
-      "path": "dynamic/规则/2026-08-19 16-20-46 情书写作风格规则_ba4bf55870e9.md",
-      "sha256": "61de556a8e93715230dcb6e65b929b833503a7a73a73b9fd2eca90675b52e1db"
-    },
-    {
       "bytes": 662,
       "path": "dynamic/购物/2026-07-09 03-29-22 购物与欠账清单_5e042a1a25e1.md",
       "sha256": "edee0495840200d891a7090059f5f5864833c8d67f28fbd71c9cb116cc50b458"
@@ -1188,11 +1188,11 @@
       "sha256": "20ae4491087837553ac08bf30a58427505bc17f0a42c68d618d503af25755f6c"
     }
   ],
-  "generated_at": "2026-10-26T13:23:12+00:00",
+  "generated_at": "2026-10-27T13:25:27+00:00",
   "path_prefix": "ombre",
   "repo": "Aria0446/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
   "source_refs_complete": true,
-  "total_bytes": 204274
+  "total_bytes": 204277
 }
